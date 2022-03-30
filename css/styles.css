@@ -112,7 +112,7 @@ header .logo {
   padding-left: 10rem;
   width: 100%;
   text-shadow: 3px 3px purple;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
 }
 
 .home-text h1 {
@@ -127,7 +127,31 @@ header .logo {
 .home-text p {
   font-size: 2rem;
   font-weight: 400;
-  padding-top: 1rem;
+  padding-top: 3rem;
   line-height: 1.3;
   width: 70rem;
+}
+
+.home-socials {
+  padding-top: 1.5rem;
+}
+
+.home-socials ul {
+  flex-direction: row;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.home-socials li {
+  display: inline-block;
+  margin-right: 2rem;
+  list-style: none;
+  background: #fff;
+  color: #111;
+  text-shadow: none;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  box-shadow: 5px 5px #c4c4c4;
 }
