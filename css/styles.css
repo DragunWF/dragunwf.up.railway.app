@@ -2,6 +2,12 @@
   --text-color: #fff;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -16,6 +22,10 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.text {
+  color: var(--text-color);
 }
 
 /* Header */
@@ -34,4 +44,51 @@ header {
 header .logo {
   color: var(--color-text);
   cursor: pointer;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: gold;
+  /* background-size: 30px;
+  background-position: center; */
+  cursor: pointer;
+  color: #111;
+  font-size: 3rem;
+}
+
+.toggle.active {
+  /* background-size: 25px;
+  background-position: center; */
+  cursor: pointer;
+}
+
+/* Home Page */
+.home-content {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* padding: 100px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  /* transition: 0.5s; */
+  z-index: 2;
+}
+
+.home-content.active {
+  right: 300px;
+}
+
+.home-content video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
 }
