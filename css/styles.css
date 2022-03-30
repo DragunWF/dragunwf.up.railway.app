@@ -1,6 +1,6 @@
-:root {
+/* :root {
   --text-color: #fff;
-}
+} */
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 /* Flex Objects */
@@ -25,7 +25,11 @@ body {
 }
 
 .text {
-  color: var(--text-color);
+  color: #fff;
+}
+
+.text h2 {
+  font-size: 2.5rem;
 }
 
 /* Header */
@@ -43,24 +47,17 @@ header {
 
 header .logo {
   color: var(--color-text);
-  cursor: pointer;
 }
 
 .toggle {
   position: relative;
   width: 60px;
   height: 60px;
-  background: gold;
-  /* background-size: 30px;
-  background-position: center; */
   cursor: pointer;
-  color: #111;
   font-size: 3rem;
 }
 
 .toggle.active {
-  /* background-size: 25px;
-  background-position: center; */
   cursor: pointer;
 }
 
