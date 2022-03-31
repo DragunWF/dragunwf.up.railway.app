@@ -1,5 +1,10 @@
-/* :root {
-  --text-color: #fff;
+:root {
+  --overlay-color: purple;
+}
+
+/* ::selection {
+  color: #fff;
+  background: #bb96c0;
 } */
 
 * {
@@ -51,7 +56,7 @@ header {
 }
 
 header .logo {
-  color: var(--color-text);
+  color: #fff;
 }
 
 .toggle {
@@ -72,13 +77,12 @@ header .logo {
   right: 0;
   width: 100%;
   min-height: 100vh;
-  /* padding: 100px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #111;
-  /* transition: 0.5s; */
   z-index: 2;
+  transition: all 0.85s;
 }
 
 .home-content.active {
@@ -101,17 +105,19 @@ header .logo {
   left: 0;
   width: 100%;
   height: 100%;
-  background: purple;
+  background: var(--overlay-color);
   mix-blend-mode: overlay;
+  transition: all 0.5s;
 }
-/* #03a9f4 */
+
 
 .home-text {
   align-items: flex-start;
   text-align: left;
   padding-left: 10rem;
   width: 100%;
-  text-shadow: 3px 3px purple;
+  text-shadow: 3px 3px var(--overlay-color);
+  transition: all 0.5s;
   /* padding-bottom: 2rem; */
 }
 
@@ -154,4 +160,12 @@ header .logo {
   border-radius: 5px;
   letter-spacing: 1px;
   box-shadow: 5px 5px #c4c4c4;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.home-socials li:hover {
+  background: #e8e8e8;
+  box-shadow: none;
+  transform: translateY(-8px);
 }
