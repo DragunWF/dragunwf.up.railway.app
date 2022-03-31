@@ -11,14 +11,43 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/951cb45b31.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <section class="home-content">
-      <header>
-        <h2>DragunWF</h2>
+      <header class="text">
+        <h2 class="logo">DragunWF</h2>
+        <i class="fa fa-solid fa-bars toggle flex-object"></i>
       </header>
+
+      <video src="videos/background-1.mp4" muted autoplay loop></video>
+      <div class="overlay"></div>
+
+      <div class="home-text text flex-object">
+        <h1>Welcome!</h1>
+        <h2>To my humble site...</h2>
+        <p>
+          Hi, I'm Marc also known in the internet as DragunWF or DragonWF. I'm a
+          self-taught programmer with only <span id="experience">6</span> months
+          of experience so don't expect much from me yet.
+        </p>
+        <div class="home-socials text flex-object">
+          <ul>
+            <li class="social-item" id="gitHub">GitHub</li>
+            <li class="social-item" id="itch">Itch.io</li>
+            <li class="social-item" id="steam">Steam</li>
+            <li class="social-item" id="codeWars">CodeWars</li>
+            <li class="social-item" id="typeRacer">TypeRacer</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </body>
+  <script src="js/main.js"></script>
 </html>
