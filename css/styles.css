@@ -100,6 +100,12 @@ header .logo {
   color: #03a9f4;
 }
 
+@media screen and (max-width: 991px) {
+  .menu {
+    width: 200px;
+  }
+}
+
 /* Home Page */
 .home-content {
   position: absolute;
@@ -111,7 +117,7 @@ header .logo {
   align-items: center;
   background: #111;
   z-index: 2;
-  transition: all 0.85s;
+  transition: all 0.75s;
 }
 
 .home-content.active {
@@ -199,4 +205,63 @@ header .logo {
   text-shadow: none;
   font-size: 1.8rem;
   text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .home-text,
+  .home-content header {
+    padding-left: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .logo {
+    padding-left: 2rem;
+  }
+
+  .home-content.active {
+    right: 200px;
+  }
+
+  #navIcon {
+    margin-left: 45px;
+    padding-left: 80px;
+  }
+
+  .home-text p {
+    width: 93%;
+  }
+
+  .home-socials {
+    padding-top: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .home-socials ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home-socials li {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2rem;
+  }
+
+  .social-item a {
+    font-size: 1.4rem;
+  }
+
+  .text h1 {
+    font-size: 5rem;
+  }
+
+  .text h2 {
+    font-size: 3rem;
+  }
+
+  .text h3 {
+    font-size: 1rem;
+  }
 }
