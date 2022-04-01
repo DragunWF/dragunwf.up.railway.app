@@ -4,7 +4,8 @@
 
 /* ::selection {
   color: #fff;
-  background: #046307;
+  background: dodgerblue;
+  #046307
 } */
 
 * {
@@ -100,7 +101,13 @@ header .logo {
   color: #03a9f4;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
+  .menu {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .menu {
     width: 200px;
   }
@@ -207,7 +214,18 @@ header .logo {
   text-decoration: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
+  .home-text,
+  .home-content header {
+    padding-left: 60px;
+  }
+
+  .home-content.active {
+    right: 250px;
+  }
+}
+
+@media (max-width: 480px) {
   .home-text,
   .home-content header {
     padding-left: 20px;
@@ -221,11 +239,6 @@ header .logo {
 
   .home-content.active {
     right: 200px;
-  }
-
-  #navIcon {
-    margin-left: 45px;
-    padding-left: 80px;
   }
 
   .home-text p {
@@ -263,5 +276,10 @@ header .logo {
 
   .text h3 {
     font-size: 1rem;
+  }
+
+  #navIcon {
+    margin-left: 45px;
+    padding-left: 80px;
   }
 }
