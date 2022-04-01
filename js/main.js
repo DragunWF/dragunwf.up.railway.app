@@ -1,9 +1,9 @@
 $(document).ready(() => {
-  const gitHub = { id: $("#gitHub"), color: "green" };
-  const itch = { id: $("#itch"), color: "#E18AAA" };
-  const steam = { id: $("#steam"), color: "#03a9f4" };
-  const codeWars = { id: $("#codeWars"), color: "#9b111E" };
-  const typeRacer = { id: $("#typeRacer"), color: "#F9C70C" };
+  const gitHub = { id: "#gitHub", color: "green" };
+  const itch = { id: "#itch", color: "#FFA500" };
+  const steam = { id: "#steam", color: "#03a9f4" };
+  const codeWars = { id: "#codeWars", color: "#9b111E" };
+  const typeRacer = { id: "#typeRacer", color: "#F9C70C" };
   const defaultColor = "purple";
 
   function changeOverlayColor(color) {
@@ -31,6 +31,6 @@ $(document).ready(() => {
   });
 
   $(".social-item").mouseout(() => {
-    $("body").get(0).style.setProperty("--overlay-color", defaultColor);
+    changeOverlayColor(defaultColor);
   });
 });
