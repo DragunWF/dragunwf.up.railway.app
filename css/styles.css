@@ -71,6 +71,35 @@ header .logo {
   cursor: pointer;
 }
 
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  z-index: -1;
+}
+
+.menu ul {
+  position: relative;
+}
+
+.menu ul li {
+  list-style: none;
+  padding-bottom: 0.6rem;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 2.8rem;
+  color: #111;
+  transition: color 0.15s ease-in;
+}
+
+.menu ul li a:hover {
+  color: #03a9f4;
+}
+
 /* Home Page */
 .home-content {
   position: absolute;
