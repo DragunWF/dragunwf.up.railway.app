@@ -24,10 +24,10 @@ body {
 
 /* Flex Objects */
 .flex-object {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .text {
@@ -45,15 +45,15 @@ body {
 
 /* Header */
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 100;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  left: 0;
+  padding: 40px 100px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 header .logo {
@@ -61,11 +61,11 @@ header .logo {
 }
 
 .toggle {
-  position: relative;
-  width: 60px;
-  height: 60px;
   cursor: pointer;
   font-size: 3rem;
+  height: 60px;
+  position: relative;
+  width: 60px;
 }
 
 .toggle.active {
@@ -73,11 +73,11 @@ header .logo {
 }
 
 .menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
   height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
   z-index: -1;
 }
 
@@ -91,9 +91,9 @@ header .logo {
 }
 
 .menu ul li a {
-  text-decoration: none;
-  font-size: 2.8rem;
   color: #111;
+  font-size: 2.8rem;
+  text-decoration: none;
   transition: color 0.15s ease-in;
 }
 
@@ -115,16 +115,16 @@ header .logo {
 
 /* Home Page */
 .home-content {
-  position: absolute;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   background: #111;
-  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
   transition: all 0.75s;
+  width: 100%;
+  z-index: 2;
 }
 
 .home-content.active {
@@ -132,33 +132,33 @@ header .logo {
 }
 
 .home-content video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
+  left: 0;
   object-fit: cover;
   opacity: 0.9;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .overlay {
+  background: var(--overlay-color);
+  height: 100%;
+  left: 0;
+  mix-blend-mode: overlay;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--overlay-color);
-  mix-blend-mode: overlay;
   transition: all 0.5s;
+  width: 100%;
 }
 
 .home-text {
   align-items: flex-start;
-  text-align: left;
   padding-left: 10rem;
-  width: 100%;
+  text-align: left;
   text-shadow: 3px 3px var(--overlay-color);
   transition: all 0.5s;
+  width: 100%;
 }
 
 .home-text h1 {
@@ -173,8 +173,8 @@ header .logo {
 .home-text p {
   font-size: 2rem;
   font-weight: 400;
-  padding-top: 3rem;
   line-height: 1.3;
+  padding-top: 3rem;
   width: 70rem;
 }
 
@@ -184,20 +184,20 @@ header .logo {
 
 .home-socials ul {
   flex-direction: row;
-  padding-top: 1rem;
   gap: 1rem;
+  padding-top: 1rem;
 }
 
 .home-socials li {
-  display: inline-block;
-  margin-right: 2rem;
-  list-style: none;
   background: #fff;
-  padding: 1.2rem;
   border-radius: 5px;
-  letter-spacing: 1px;
   box-shadow: 5px 5px #c4c4c4;
   cursor: pointer;
+  display: inline-block;
+  letter-spacing: 1px;
+  list-style: none;
+  margin-right: 2rem;
+  padding: 1.2rem;
   transition: all 0.25s;
 }
 
@@ -209,9 +209,9 @@ header .logo {
 
 .social-item a {
   color: #111;
-  text-shadow: none;
   font-size: 1.8rem;
   text-decoration: none;
+  text-shadow: none;
 }
 
 @media (max-width: 1024px) {
@@ -228,9 +228,9 @@ header .logo {
 @media (max-width: 480px) {
   .home-text,
   .home-content header {
+    align-items: center;
     padding-left: 20px;
     text-align: center;
-    align-items: center;
   }
 
   .logo {
@@ -246,9 +246,9 @@ header .logo {
   }
 
   .home-socials {
-    padding-top: 0;
     align-items: flex-start;
     justify-content: flex-start;
+    padding-top: 0;
   }
 
   .home-socials ul {
@@ -258,8 +258,8 @@ header .logo {
 
   .home-socials li {
     display: inline-block;
-    vertical-align: top;
     margin-top: 2rem;
+    vertical-align: top;
   }
 
   .social-item a {
