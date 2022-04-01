@@ -4,7 +4,7 @@
 
 /* ::selection {
   color: #fff;
-  background: #bb96c0;
+  background: #046307;
 } */
 
 * {
@@ -110,7 +110,6 @@ header .logo {
   transition: all 0.5s;
 }
 
-
 .home-text {
   align-items: flex-start;
   text-align: left;
@@ -118,7 +117,6 @@ header .logo {
   width: 100%;
   text-shadow: 3px 3px var(--overlay-color);
   transition: all 0.5s;
-  /* padding-bottom: 2rem; */
 }
 
 .home-text h1 {
@@ -153,10 +151,7 @@ header .logo {
   margin-right: 2rem;
   list-style: none;
   background: #fff;
-  color: #111;
-  text-shadow: none;
   padding: 1.2rem;
-  font-size: 1.8rem;
   border-radius: 5px;
   letter-spacing: 1px;
   box-shadow: 5px 5px #c4c4c4;
@@ -168,4 +163,11 @@ header .logo {
   background: #e8e8e8;
   box-shadow: none;
   transform: translateY(-8px);
+}
+
+.social-item a {
+  color: #111;
+  text-shadow: none;
+  font-size: 1.8rem;
+  text-decoration: none;
 }
