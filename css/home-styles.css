@@ -1,0 +1,158 @@
+/* Styles that are only specific to the home page */
+
+:root {
+  --overlay-color: purple;
+}
+
+.home-content {
+  align-items: center;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  transition: all 0.75s;
+  width: 100%;
+  z-index: 2;
+}
+
+.home-content.active {
+  right: 300px;
+}
+
+.home-content video {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.overlay {
+  background: var(--overlay-color);
+  height: 100%;
+  left: 0;
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.home-text {
+  align-items: flex-start;
+  padding-left: 10rem;
+  text-align: left;
+  text-shadow: 3px 3px var(--overlay-color);
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.home-text h1 {
+  font-size: 6.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.home-text h2 {
+  font-size: 5.5rem;
+}
+
+.home-text p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  padding-top: 3rem;
+  width: 70rem;
+}
+
+.home-socials {
+  padding-top: 1.5rem;
+}
+
+.home-socials ul {
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.home-socials li {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px #c4c4c4;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 1px;
+  list-style: none;
+  margin-right: 2rem;
+  padding: 1.2rem;
+  transition: all 0.25s;
+}
+
+.home-socials li:hover {
+  background: #e8e8e8;
+  box-shadow: none;
+  transform: translateY(-8px);
+}
+
+.social-item a {
+  color: #111;
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+@media (max-width: 1024px) {
+  .home-text,
+  .home-content header {
+    padding-left: 60px;
+  }
+
+  .home-content.active {
+    right: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-text,
+  .home-content header {
+    align-items: center;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    padding-left: 2rem;
+  }
+
+  .home-content.active {
+    right: 200px;
+  }
+
+  .home-text p {
+    width: 93%;
+  }
+
+  .home-socials {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .home-socials ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home-socials li {
+    display: inline-block;
+    margin-top: 2rem;
+    vertical-align: top;
+  }
+
+  .social-item a {
+    font-size: 1.4rem;
+  }
+}
