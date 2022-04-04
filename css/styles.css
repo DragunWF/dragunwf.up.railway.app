@@ -293,3 +293,26 @@ header .logo {
     font-size: 1.4rem;
   }
 }
+
+/* About Page */
+.about-buttons {
+  flex-direction: row;
+  gap: 35px;
+  font-size: 2.2rem;
+  margin-top: 25px;
+}
+
+.about-buttons button {
+  border-radius: 5px;
+  box-shadow: 5px 5px #c4c4c4;
+  font-weight: 500;
+  padding: 1rem;
+  border: 0;
+  transition: all 0.25s;
+}
+
+.about-buttons button:hover {
+  background: #e8e8e8;
+  box-shadow: none;
+  transform: translateY(-8px);
+}
