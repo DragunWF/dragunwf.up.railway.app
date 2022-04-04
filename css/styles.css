@@ -44,16 +44,16 @@ body {
 }
 
 .text-links {
-  text-decoration: none;
+  border-bottom: 0.1em solid var(--color-text);
   color: var(--color-text);
   font-weight: 600;
-  border-bottom: 0.1em solid var(--color-text);
+  text-decoration: none;
   transition: all 0.15s;
 }
 
 .text-links:hover {
-  color: #c9c9c9;
   border-bottom: 0.1em solid #c9c9c9;
+  color: #c9c9c9;
 }
 
 .text-bold {
@@ -332,11 +332,11 @@ header .logo {
 
 .about-buttons button,
 .more-btn {
-  font-size: 2.2rem;
   border-radius: 5px;
-  box-shadow: 5px 5px #c4c4c4;
-  padding: 1rem;
   border: 0;
+  box-shadow: 5px 5px #c4c4c4;
+  font-size: 2.2rem;
+  padding: 1rem;
   transition: all 0.25s;
 }
 
@@ -344,8 +344,8 @@ header .logo {
 .more-btn:hover {
   background: #e8e8e8;
   box-shadow: none;
-  transform: translateY(-8px);
   cursor: pointer;
+  transform: translateY(-8px);
 }
 
 #p1,
