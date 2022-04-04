@@ -21,7 +21,7 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-/* Flex Objects */
+/* Objects */
 .flex-object {
   align-items: center;
   display: flex;
@@ -55,8 +55,16 @@ body {
   border-bottom: 0.1em solid #c9c9c9;
 }
 
+.text-bold {
+  font-weight: 600;
+}
+
 .page-description {
   padding-top: 10px;
+}
+
+.more-btn {
+  margin-top: 25px;
 }
 
 @media screen and (max-width: 480px) {
@@ -253,7 +261,7 @@ header .logo {
 }
 
 @media (max-width: 1024px) {
-  .home-text,
+  .page-container,
   .content header {
     padding-left: 60px;
   }
@@ -264,7 +272,7 @@ header .logo {
 }
 
 @media (max-width: 480px) {
-  .home-text,
+  .page-container,
   .content header {
     align-items: center;
     padding-left: 10px;
@@ -279,16 +287,16 @@ header .logo {
     right: 200px;
   }
 
-  .home-text h1 {
+  .page-container h1 {
     font-size: 5.3rem;
     margin-bottom: 0.8rem;
   }
 
-  .home-text h2 {
+  .page-container h2 {
     font-size: 3rem;
   }
 
-  .home-text p {
+  .page-container p {
     width: 93%;
   }
 
@@ -318,11 +326,12 @@ header .logo {
 .about-buttons {
   flex-direction: row;
   gap: 35px;
-  font-size: 2.2rem;
   margin-top: 25px;
 }
 
-.about-buttons button {
+.about-buttons button,
+.more-btn {
+  font-size: 2.2rem;
   border-radius: 5px;
   box-shadow: 5px 5px #c4c4c4;
   padding: 1rem;
@@ -330,7 +339,8 @@ header .logo {
   transition: all 0.25s;
 }
 
-.about-buttons button:hover {
+.about-buttons button:hover,
+.more-btn:hover {
   background: #e8e8e8;
   box-shadow: none;
   transform: translateY(-8px);
