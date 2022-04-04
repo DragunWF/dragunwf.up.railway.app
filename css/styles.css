@@ -2,11 +2,10 @@
   --overlay-color: purple;
 }
 
-/* ::selection {
+::selection {
   color: #fff;
-  background: dodgerblue;
-  #046307
-} */
+  background: #9966cc;
+}
 
 * {
   margin: 0;
@@ -126,10 +125,15 @@ header .logo {
   .menu {
     width: 200px;
   }
+
+  #navIcon {
+    margin-left: 45px;
+    padding-left: 80px;
+  }
 }
 
-/* Home Page */
-.home-content {
+/* Content */
+.content {
   align-items: center;
   background: #111;
   display: flex;
@@ -142,11 +146,11 @@ header .logo {
   z-index: 2;
 }
 
-.home-content.active {
+.content.active {
   right: 300px;
 }
 
-.home-content video {
+.content video {
   height: 100%;
   left: 0;
   object-fit: cover;
@@ -173,7 +177,6 @@ header .logo {
   text-align: left;
   text-shadow: 3px 3px var(--overlay-color);
   transition: all 0.5s;
-  width: 100%;
 }
 
 .home-text h1 {
@@ -231,20 +234,20 @@ header .logo {
 
 @media (max-width: 1024px) {
   .home-text,
-  .home-content header {
+  .content header {
     padding-left: 60px;
   }
 
-  .home-content.active {
+  .content.active {
     right: 250px;
   }
 }
 
 @media (max-width: 480px) {
   .home-text,
-  .home-content header {
+  .content header {
     align-items: center;
-    padding-left: 20px;
+    padding-left: 10px;
     text-align: center;
   }
 
@@ -252,8 +255,17 @@ header .logo {
     padding-left: 2rem;
   }
 
-  .home-content.active {
+  .content.active {
     right: 200px;
+  }
+
+  .home-text h1 {
+    font-size: 5.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .home-text h2 {
+    font-size: 3rem;
   }
 
   .home-text p {
@@ -279,10 +291,5 @@ header .logo {
 
   .social-item a {
     font-size: 1.4rem;
-  }
-
-  #navIcon {
-    margin-left: 45px;
-    padding-left: 80px;
   }
 }
