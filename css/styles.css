@@ -1,9 +1,10 @@
 :root {
   --overlay-color: purple;
+  --color-text: #fff;
 }
 
 ::selection {
-  color: #fff;
+  color: var(--color-text);
   background: #9966cc;
 }
 
@@ -30,7 +31,7 @@ body {
 }
 
 .text {
-  color: #fff;
+  color: var(--color-text);
   z-index: 10;
 }
 
@@ -44,9 +45,9 @@ body {
 
 .text-links {
   text-decoration: none;
-  color: #fff;
+  color: var(--color-text);
   font-weight: 600;
-  border-bottom: 0.1em solid #fff;
+  border-bottom: 0.1em solid var(--color-text);
   transition: all 0.15s;
 }
 
@@ -95,7 +96,7 @@ header {
 }
 
 header .logo {
-  color: #fff;
+  color: var(--color-text);
 }
 
 .toggle {
