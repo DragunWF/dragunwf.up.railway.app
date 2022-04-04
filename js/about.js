@@ -15,6 +15,12 @@ $(document).ready(() => {
     currentId = `#p${infoIndex}`;
   }
 
+  function onPageLoad() {
+    const hiddenContents = ["#about-header", "#p0", ".about-buttons"];
+    for (let element of hiddenContents) $(element).hide();
+    for (let content of hiddenContents) $(content).fadeIn(850);
+  }
+
   next.click(() => {
     infoIndex++;
     updateAboutText();
@@ -24,4 +30,6 @@ $(document).ready(() => {
     infoIndex--;
     updateAboutText();
   });
+
+  onPageLoad();
 });
