@@ -345,6 +345,7 @@ header .logo {
   background: #e8e8e8;
   box-shadow: none;
   transform: translateY(-8px);
+  cursor: pointer;
 }
 
 #p1,
