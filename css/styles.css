@@ -42,6 +42,19 @@ body {
   font-size: 2.5rem;
 }
 
+.text-links {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 0.1em solid #fff;
+  transition: all 0.15s;
+}
+
+.text-links:hover {
+  color: #c9c9c9;
+  border-bottom: 0.1em solid #c9c9c9;
+}
+
 @media screen and (max-width: 480px) {
   .text h1 {
     font-size: 5rem;
@@ -132,6 +145,11 @@ header .logo {
   }
 }
 
+/* Page */
+.page-description {
+  padding-top: 10px;
+}
+
 /* Content */
 .content {
   align-items: center;
@@ -171,28 +189,28 @@ header .logo {
   width: 100%;
 }
 
-.home-text {
+.page-container {
   align-items: flex-start;
-  padding-left: 10rem;
+  padding-left: 100px;
   text-align: left;
   text-shadow: 3px 3px var(--overlay-color);
   transition: all 0.5s;
 }
 
-.home-text h1 {
+.page-container h1 {
   font-size: 6.5rem;
   margin-bottom: 0.8rem;
 }
 
-.home-text h2 {
+.page-container h2 {
   font-size: 5.5rem;
 }
 
-.home-text p {
+.page-container p {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.3;
-  padding-top: 3rem;
+  padding-top: 30px;
   width: 70rem;
 }
 
@@ -305,7 +323,6 @@ header .logo {
 .about-buttons button {
   border-radius: 5px;
   box-shadow: 5px 5px #c4c4c4;
-  font-weight: 500;
   padding: 1rem;
   border: 0;
   transition: all 0.25s;
@@ -315,4 +332,11 @@ header .logo {
   background: #e8e8e8;
   box-shadow: none;
   transform: translateY(-8px);
+}
+
+#p1,
+#p2,
+#p3,
+#p4 {
+  display: none;
 }
