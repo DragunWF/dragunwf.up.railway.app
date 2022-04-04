@@ -41,7 +41,7 @@ $(document).ready(() => {
   let infoIndex = 0;
 
   function updateAboutText() {
-    const indexLimit = 1;
+    const indexLimit = 4;
     if (infoIndex > indexLimit) infoIndex = 0;
     else if (infoIndex < 0) infoIndex = indexLimit;
 
