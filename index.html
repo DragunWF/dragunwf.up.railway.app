@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/951cb45b31.js"
       crossorigin="anonymous"
@@ -29,21 +30,20 @@
         <li><a href="form.html">Form</a></li>
       </ul>
     </nav>
-    <section class="home-content">
+    <section class="content">
       <header class="text">
         <h2 class="logo">DragunWF</h2>
         <i class="fa-solid fa-bars toggle flex-object" id="navIcon"></i>
       </header>
       <video src="videos/background.mp4" muted autoplay loop></video>
       <div class="overlay"></div>
-      <div class="home-text text flex-object">
+      <div class="page-container text flex-object" data-aos="fade-right">
         <h1>Welcome!</h1>
         <h2>To my humble site...</h2>
         <p>
-          Hi, I'm Marc also known as DragonWF or DragunWF over the internet. I'm
-          a self-taught programmer with only
-          <span id="experience">6</span> months of experience so don't expect
-          much from me yet.
+          Hello there, I'm Marc! I'm an aspiring Software Developer from the
+          Philippines. I'm currently a senior high school student with plans on
+          taking BSIT in college.
         </p>
         <div class="home-socials text flex-object">
           <ul>
@@ -86,6 +86,10 @@
       </div>
     </section>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="js/main.js"></script>
   <script src="js/nav.js"></script>
 </html>
