@@ -240,7 +240,6 @@ header .logo {
   letter-spacing: 1px;
   list-style: none;
   margin-right: 2rem;
-  padding: 1.2rem;
   transition: all 0.25s;
 }
 
@@ -252,9 +251,13 @@ header .logo {
 
 .social-item {
   color: #111;
+  display: block;
   font-size: 1.8rem;
+  height: 100%;
+  padding: 1.2rem;
   text-decoration: none;
   text-shadow: none;
+  width: 100%;
 }
 
 #home-text p {
