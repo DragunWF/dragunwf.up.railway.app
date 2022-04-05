@@ -250,7 +250,7 @@ header .logo {
   transform: translateY(-8px);
 }
 
-.social-item a {
+.social-item {
   color: #111;
   font-size: 1.8rem;
   text-decoration: none;
@@ -261,7 +261,7 @@ header .logo {
   padding-top: 30px;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .page-container,
   .content header {
     padding-left: 60px;
@@ -272,7 +272,7 @@ header .logo {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .page-container,
   .content header {
     align-items: center;
