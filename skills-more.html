@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles-misc.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/951cb45b31.js"
       crossorigin="anonymous"
@@ -26,7 +27,7 @@
     <section class="content skills-content flex-object text">
       <article class="skills-containers">
         <div class="skills-container-section">
-          <div class="container disclaimer">
+          <div class="container disclaimer" data-aos="fade-right">
             <h2>Known Languages</h2>
             <p>This includes both programming and markup languages</p>
             <ul>
@@ -36,7 +37,7 @@
               <li>SQL</li>
             </ul>
           </div>
-          <div class="container">
+          <div class="container" data-aos="fade-right">
             <h2>Miscellaneous</h2>
             <ul>
               <li>100 WPM+ Typing Speed</li>
@@ -47,7 +48,7 @@
           </div>
         </div>
         <div class="skills-container-section">
-          <div class="container disclaimer">
+          <div class="container disclaimer" data-aos="fade-left">
             <h2>Technologies</h2>
             <p>This excludes languages listed in the languages section</p>
             <ul>
@@ -87,12 +88,16 @@
           </div>
         </div>
       </article>
-      <a href="index.html" class="return-to-home text">
+      <a href="index.html" class="return-to-home text" data-aos="zoom-in">
         <button>Back to Home Page</button>
       </a>
     </section>
     <footer class="flex-object">
       <span class="footer-text text">&copy; DragunWF</span>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
