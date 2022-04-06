@@ -36,7 +36,7 @@ $(document).ready(() => {
   });
 
   // Other Pages
-  const projectsList = { id: "#projectsListBtn", color: "#0f52ba" };
+  const projectsList = { id: "#projectListBtn", color: "#0f52ba" };
   const moreInfo = { id: "#moreInfoBtn", color: "green" };
   const messageForm = { id: "#messageFormBtn", color: "#9b111E" };
 
