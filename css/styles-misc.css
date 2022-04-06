@@ -1,0 +1,25 @@
+:root {
+  --color-text: #fff;
+}
+
+::selection {
+  color: var(--color-text);
+  background: #9966cc;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-image: url("../images/constellations.svg");
+}
+
+/* Objects */
+.flex-object {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
