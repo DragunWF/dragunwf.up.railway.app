@@ -21,6 +21,18 @@ header {
   background: #111;
 }
 
+footer {
+  width: 100%;
+  background: #111;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* margin-top: 50px;
+  height:80px;
+  position: absolute;
+  bottom: 0;
+  left: 0; */
+}
+
 /* Objects */
 .flex-object {
   align-items: center;
@@ -35,17 +47,43 @@ header {
 }
 
 .text h1 {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
 }
 
 .text h2 {
   font-size: 2.5rem;
 }
 
+.disclaimer h2 {
+  margin-bottom: 1.3rem;
+}
+
+.disclaimer p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.disclaimer ul {
+  margin-top: 1.5rem;
+}
+
+.footer-text {
+  opacity: 0.85;
+}
+
+/* #wrapper {
+  min-height: 100%;
+  position: relative;
+} */
+
 /* Main */
 .content {
   width: 100%;
   height: 100%;
+  padding: 10px;
+  padding-bottom: 80px;
 }
 
 .container {
@@ -56,6 +94,7 @@ header {
 
 .container ul {
   line-height: 1.5;
+  padding-left: 25px;
 }
 
 .container h2 {
@@ -63,9 +102,20 @@ header {
   border-bottom: 1px solid #d3d3d3;
 }
 
+/* Skills */
 .skills-containers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
-  margin-top: 30px;
+  margin-top: 50px;
+}
+
+.skills-container-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+}
+
+.skills-text {
+  width: 1rem;
 }
