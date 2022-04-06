@@ -28,6 +28,7 @@ header {
 
 header h1 {
   border-bottom: 1px solid #d3d3d3;
+  letter-spacing: 0.2rem;
 }
 
 footer {
@@ -106,7 +107,6 @@ footer {
 }
 
 .return-to-home button {
-  /* background: #1c001c; */
   box-shadow: 5px 5px #c4c4c4;
   background: #fff;
   border: 0;
@@ -128,7 +128,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .skills-container-section {
