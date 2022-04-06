@@ -123,6 +123,12 @@ footer {
   transform: translateY(-8px);
 }
 
+@media screen and (max-width: 480px) {
+  .container {
+    width: 280px;
+  }
+}
+
 /* Skills */
 .skills-containers {
   display: grid;
@@ -139,4 +145,19 @@ footer {
 
 .skills-text {
   width: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .skills-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .skills-containers {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
