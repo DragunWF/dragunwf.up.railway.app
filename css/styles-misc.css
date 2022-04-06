@@ -35,7 +35,7 @@ footer {
   background: #111;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 /* Objects */
@@ -99,6 +99,28 @@ footer {
 .container h2 {
   text-align: center;
   border-bottom: 1px solid #d3d3d3;
+}
+
+.return-to-home {
+  margin-top: 40px;
+}
+
+.return-to-home button {
+  /* background: #1c001c; */
+  box-shadow: 5px 5px #c4c4c4;
+  background: #fff;
+  border: 0;
+  padding: 1rem;
+  color: #111;
+  font-weight: 600;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.return-to-home button:hover {
+  box-shadow: none;
+  transform: translateY(-8px);
 }
 
 /* Skills */
