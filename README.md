@@ -4,7 +4,7 @@
 
 Hello! This is my new personal website. A replacement of my previous website.
 
-### Links:
+## Links:
 
 - [dragunwf.netlify.app](#)
 - [My Previous Website](https://dragonwf.netlify.app/)
