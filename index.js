@@ -5,7 +5,11 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.send("Hello!");
+  res.render("index");
+});
+
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 app.listen(3000, () => {
