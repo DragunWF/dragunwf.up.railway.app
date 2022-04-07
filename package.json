@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DragunWF/dragonwf.netlify.app.git"
+    "url": "git+https://github.com/DragunWF/dragunwf.netlify.app.git"
   },
   "keywords": [],
   "author": "DragunWF",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DragunWF/dragonwf.netlify.app/issues"
+    "url": "https://github.com/DragunWF/dragunwf.netlify.app/issues"
   },
-  "homepage": "https://github.com/DragunWF/dragonwf.netlify.app#readme",
+  "homepage": "https://github.com/DragunWF/dragunwf.netlify.app#readme",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3"

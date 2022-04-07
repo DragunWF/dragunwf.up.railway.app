@@ -20,6 +20,6 @@ app.use("/skills", skillsRouter);
 app.use("/projects", projectsRouter);
 app.use("/contact", contactRouter);
 
-app.listen(3000, () => {
+app.listen(8080, () => {
   console.log("Server is now running!");
 });
