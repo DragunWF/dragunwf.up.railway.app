@@ -18,7 +18,7 @@ app.get("/about", (req, res) => {
 
 app.use("/skills", skillsRouter);
 app.use("/projects", projectsRouter);
-app.use("/contacts", contactRouter);
+app.use("/contact", contactRouter);
 
 app.listen(3000, () => {
   console.log("Server is now running!");
