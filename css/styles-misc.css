@@ -165,15 +165,28 @@ footer {
 
 /* Form */
 .form-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
   margin-top: 30px;
   align-items: flex-start;
   padding: 3.5rem;
 }
 
+.form-container form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.form-container input,
 .form-container textarea {
   resize: none;
+  transition: all 0.15s;
+  padding: 0.5rem;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  outline: none;
+  border: 1px solid #111;
+  box-shadow: 0 0 5px #808080;
 }
 
 .form-container h2 {
