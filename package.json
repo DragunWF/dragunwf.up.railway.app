@@ -1,0 +1,29 @@
+{
+  "name": "dragunwf.netlify.app",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DragunWF/dragonwf.netlify.app.git"
+  },
+  "keywords": [],
+  "author": "DragunWF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DragunWF/dragonwf.netlify.app/issues"
+  },
+  "homepage": "https://github.com/DragunWF/dragonwf.netlify.app#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
