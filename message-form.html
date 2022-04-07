@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DragunWF | Message Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles-misc.css" />
+    <script
+      src="https://kit.fontawesome.com/951cb45b31.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header class="text flex-object">
+      <h1>Message Form</h1>
+    </header>
+    <section class="content text flex-object">
+      <div class="container form-container flex-object">
+        <h2>Name:</h2>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name/username (Optional)"
+          id="formName"
+        />
+        <h2>Message:</h2>
+        <textarea
+          name="message"
+          id="formTextArea"
+          cols="30"
+          rows="10"
+          placeholder="Feel free to leave me a message here!"
+        ></textarea>
+        <div class="form-buttons flex-object">
+          <button id="submit">Submit</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+      <a href="index.html" class="return-to-home text" data-aos="zoom-in">
+        <button>Back to Home Page</button>
+      </a>
+    </section>
+    <footer class="flex-object">
+      <span class="footer-text text">&copy; DragunWF</span>
+    </footer>
+    <script src="js/form.js"></script>
+  </body>
+</html>
