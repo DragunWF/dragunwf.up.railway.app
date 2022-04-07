@@ -2,7 +2,7 @@
   --color-text: #fff;
 }
 
-/* #9966cc */
+/* #9966cc (Color code for amethyst color) */
 ::selection {
   color: var(--color-text);
   background: #046307;
@@ -28,6 +28,7 @@ header {
 
 header h1 {
   border-bottom: 1px solid #d3d3d3;
+  font-size: 2.8rem;
   letter-spacing: 0.2rem;
 }
 
@@ -60,25 +61,6 @@ footer {
   font-size: 2.5rem;
 }
 
-.disclaimer h2 {
-  margin-bottom: 1.3rem;
-}
-
-.disclaimer p {
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-}
-
-.disclaimer ul {
-  margin-top: 1.5rem;
-}
-
-.footer-text {
-  opacity: 0.85;
-}
-
 /* Main */
 .content {
   width: 100%;
@@ -106,7 +88,26 @@ footer {
   margin-top: 40px;
 }
 
-.return-to-home button {
+.disclaimer h2 {
+  margin-bottom: 1.3rem;
+}
+
+.disclaimer p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.disclaimer ul {
+  margin-top: 1.5rem;
+}
+
+.footer-text {
+  opacity: 0.85;
+}
+
+.button-misc {
   box-shadow: 5px 5px #c4c4c4;
   background: #fff;
   border: 0;
@@ -118,7 +119,7 @@ footer {
   transition: all 0.25s;
 }
 
-.return-to-home button:hover {
+.button-misc:hover {
   box-shadow: none;
   transform: translateY(-8px);
 }
@@ -160,4 +161,30 @@ footer {
   .skills-containers {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* Form */
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 30px;
+  align-items: flex-start;
+  padding: 3.5rem;
+}
+
+.form-container textarea {
+  resize: none;
+}
+
+.form-container h2 {
+  border-bottom: none;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.form-buttons {
+  width: 100%;
+  padding-top: 30px;
+  flex-direction: row;
+  gap: 30px;
 }
