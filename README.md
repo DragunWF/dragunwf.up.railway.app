@@ -2,7 +2,12 @@
 
 ## Description:
 
-Hello! This is my new personal website. A replacement of [dragonwf.netlify.app](https://dragonwf.netlify.app/).
+Hello! This is my new personal website. A replacement of my previous website.
+
+### Links:
+
+- [dragunwf.netlify.app](#)
+- [My Previous Website](https://dragonwf.netlify.app/)
 
 ## Attributions:
 
