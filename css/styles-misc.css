@@ -61,6 +61,15 @@ footer {
   font-size: 2.5rem;
 }
 
+.text-link {
+  color: #5fed5f;
+  transition: all 0.15s;
+}
+
+.text-link:hover {
+  color: #047307;
+}
+
 /* Main */
 .content {
   width: 100%;
@@ -130,7 +139,7 @@ footer {
   }
 }
 
-/* Skills */
+/* Skills Page */
 .skills-containers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -163,7 +172,7 @@ footer {
   }
 }
 
-/* Form */
+/* Form Page */
 .form-container {
   margin-top: 30px;
   align-items: flex-start;
@@ -200,4 +209,27 @@ footer {
   padding-top: 30px;
   flex-direction: row;
   gap: 30px;
+}
+
+/* Projects Page */
+.projects-container {
+  padding: 30px;
+}
+
+.projects-container h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.projects-container p {
+  width: 53rem;
+  line-height: 1.3;
+}
+
+.projects-container li {
+  width: 50rem;
+}
+
+#moreInfo {
+  margin-top: 45px;
 }
