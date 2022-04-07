@@ -2,6 +2,7 @@ import express from "express";
 import projectsRouter from "./routes/projects.js";
 import skillsRouter from "./routes/skills.js";
 import contactRouter from "./routes/contact.js";
+import DatabaseTool from "./utils/db-tool.js";
 
 const app = express();
 
@@ -10,10 +11,12 @@ app.use("/public", express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("index");
+  DatabaseTool.insertPageVisit(1);
 });
 
 app.get("/about", (req, res) => {
   res.render("about");
+  DatabaseTool.insertPageVisit(2);
 });
 
 app.use("/skills", skillsRouter);
