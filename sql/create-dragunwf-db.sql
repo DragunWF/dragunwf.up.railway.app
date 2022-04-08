@@ -18,7 +18,7 @@ USE `dragunwf_app_db` ;
 -- Table `dragunwf_app_db`.`pages`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `dragunwf_app_db`.`pages` (
-  `page_id` TINYINT NOT NULL,
+  `page_id` TINYINT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
   `path` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`page_id`))
@@ -29,7 +29,7 @@ ENGINE = InnoDB;
 -- Table `dragunwf_app_db`.`visits`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `dragunwf_app_db`.`visits` (
-  `visit_id` INT NOT NULL,
+  `visit_id` INT NOT NULL AUTO_INCREMENT,
   `page_id` TINYINT NOT NULL,
   `date` DATE NOT NULL,
   `hour` TIME NOT NULL,
@@ -47,7 +47,7 @@ ENGINE = InnoDB;
 -- Table `dragunwf_app_db`.`social_links`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `dragunwf_app_db`.`social_links` (
-  `link_id` TINYINT NOT NULL,
+  `link_id` TINYINT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
   `link` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`link_id`))
@@ -58,7 +58,7 @@ ENGINE = InnoDB;
 -- Table `dragunwf_app_db`.`link_clicks`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `dragunwf_app_db`.`link_clicks` (
-  `click_id` INT NOT NULL,
+  `click_id` INT NOT NULL AUTO_INCREMENT,
   `link_id` TINYINT NOT NULL,
   `date` DATE NOT NULL,
   `hour` TIME NOT NULL,
