@@ -2,11 +2,11 @@
   "name": "dragunwf.netlify.app",
   "version": "1.0.0",
   "description": "My personal website.",
-  "main": "src/index.js",
+  "main": "src/api.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "devStart": "nodemon src/index.js",
+    "start": "node src/api.js",
+    "devStart": "nodemon src/api.js",
     "serve": "./node_modules/.bin/netlify-lambda build src",
     "build": "./node_modules/.bin/netlify-lambda build src"
   },

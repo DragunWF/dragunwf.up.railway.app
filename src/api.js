@@ -29,6 +29,6 @@ router.use("/projects", projectsRouter);
 router.use("/contact", contactRouter);
 router.use("/socials", socialsRouter);
 
-app.use("/", router);
+app.use(".netlify/functions/api", router);
 
 export const handler = serverless(app);
