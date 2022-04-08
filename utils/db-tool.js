@@ -38,7 +38,7 @@ class DatabaseTool {
   static insertSocialsVisit(linkId) {
     if (databaseConnected) {
       try {
-        const sqlQuery = `INSERT INTO link_clicks (name, date, hour) VALUES (${linkId}, ${myDate}, ${myTime});`;
+        const sqlQuery = `INSERT INTO link_clicks (link_id, date, hour) VALUES (${linkId}, ${myDate}, ${myTime});`;
         db.query(sqlQuery);
       } catch (err) {
         console.error(err);
