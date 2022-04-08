@@ -1,11 +1,15 @@
 import express from "express";
+import serverless from "serverless-http";
+
 import projectsRouter from "./routes/projects.js";
 import skillsRouter from "./routes/skills.js";
 import contactRouter from "./routes/contact.js";
 import socialsRouter from "./routes/socials.js";
+
 import DatabaseTool from "./utils/db-tool.js";
 
 const app = express();
+const router = express.Router();
 
 app.set("view engine", "ejs");
 app.use("/public", express.static("public"));
@@ -25,6 +29,6 @@ app.use("/projects", projectsRouter);
 app.use("/contact", contactRouter);
 app.use("/socials", socialsRouter);
 
-app.listen(8000, () => {
-  console.log("Server is now running!");
-});
+app.use("/", router);
+
+export const handler = serverless(app);
