@@ -2,6 +2,7 @@ import express from "express";
 import projectsRouter from "./routes/projects.js";
 import skillsRouter from "./routes/skills.js";
 import contactRouter from "./routes/contact.js";
+import socialsRouter from "./routes/socials.js";
 import DatabaseTool from "./utils/db-tool.js";
 
 const app = express();
@@ -22,6 +23,7 @@ app.get("/about", (req, res) => {
 app.use("/skills", skillsRouter);
 app.use("/projects", projectsRouter);
 app.use("/contact", contactRouter);
+app.use("/socials", socialsRouter);
 
 app.listen(8000, () => {
   console.log("Server is now running!");
