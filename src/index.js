@@ -11,23 +11,23 @@ import DatabaseTool from "./utils/db-tool.js";
 const app = express();
 const router = express.Router();
 
-app.set("view engine", "ejs");
-app.use("/public", express.static("public"));
+router.set("view engine", "ejs");
+router.use("/public", express.static("public"));
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.render("index");
   DatabaseTool.insertPageVisit(1);
 });
 
-app.get("/about", (req, res) => {
+router.get("/about", (req, res) => {
   res.render("about");
   DatabaseTool.insertPageVisit(2);
 });
 
-app.use("/skills", skillsRouter);
-app.use("/projects", projectsRouter);
-app.use("/contact", contactRouter);
-app.use("/socials", socialsRouter);
+router.use("/skills", skillsRouter);
+router.use("/projects", projectsRouter);
+router.use("/contact", contactRouter);
+router.use("/socials", socialsRouter);
 
 app.use("/", router);
 
