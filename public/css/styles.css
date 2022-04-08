@@ -260,6 +260,12 @@ header .logo {
   width: 100%;
 }
 
+#infoBtn {
+  color: #111;
+  text-decoration: none;
+  text-shadow: none;
+}
+
 #home-text p {
   padding-top: 30px;
 }
@@ -335,6 +341,7 @@ header .logo {
 
 .about-buttons button,
 .more-btn {
+  background: #fff;
   border-radius: 5px;
   border: 0;
   box-shadow: 5px 5px #c4c4c4;
