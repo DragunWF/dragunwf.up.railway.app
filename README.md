@@ -1,4 +1,4 @@
-# dragunwf.netlify.app
+# dragunwf.herokuapp.com
 
 ## Description:
 
@@ -6,7 +6,7 @@ Hello! This is my new personal website. A replacement of my previous website.
 
 ## Links:
 
-- [dragunwf.netlify.app](#)
+- [dragunwf.herokuapp.com](https://dragunwf.herokuapp.com/)
 - [My Previous Website](https://dragonwf.netlify.app/)
 
 ## Attributions:
