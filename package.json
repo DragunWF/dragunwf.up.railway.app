@@ -2,7 +2,7 @@
   "name": "dragunwf.netlify.app",
   "version": "1.0.0",
   "description": "My personal website.",
-  "main": "functions/api.js",
+  "main": "functions/index.js",
   "type": "module",
   "scripts": {
     "test": ""
