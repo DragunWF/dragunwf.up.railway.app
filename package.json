@@ -5,7 +5,8 @@
   "main": "functions/index.js",
   "type": "module",
   "scripts": {
-    "test": ""
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve functions",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build functions"
   },
   "repository": {
     "type": "git",
