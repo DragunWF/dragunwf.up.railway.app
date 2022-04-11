@@ -1,5 +1,5 @@
 {
-  "name": "dragunwf.netlify.app",
+  "name": "dragunwf.herokuapp.com",
   "version": "1.0.0",
   "description": "My personal website.",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DragunWF/dragunwf.netlify.app.git"
+    "url": "git+https://github.com/DragunWF/dragunwf.herokuapp.com.git"
   },
   "keywords": [],
   "author": "DragunWF",
   "license": "All Rights Reserved",
   "bugs": {
-    "url": "https://github.com/DragunWF/dragunwf.netlify.app/issues"
+    "url": "https://github.com/DragunWF/dragunwf.herokuapp.com/issues"
   },
-  "homepage": "https://github.com/DragunWF/dragunwf.netlify.app#readme",
+  "homepage": "https://github.com/DragunWF/dragunwf.herokuapp.com#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
