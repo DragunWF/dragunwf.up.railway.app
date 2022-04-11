@@ -1,7 +1,6 @@
 import "dotenv/config";
 import mysql from "mysql";
 
-// let databaseConnected = false;
 const db = mysql.createPool({
   connectionLimit: 5,
   aquireTimeout: 10000,
