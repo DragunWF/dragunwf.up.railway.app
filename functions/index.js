@@ -11,7 +11,7 @@ import DatabaseTool from "./utils/db-tool.js";
 const app = express();
 const router = express.Router();
 
-router.set("view engine", "ejs");
+app.set("view engine", "ejs");
 router.use("/public", express.static("public"));
 
 router.get("/", (req, res) => {
@@ -29,6 +29,6 @@ router.use("/projects", projectsRouter);
 router.use("/contact", contactRouter);
 router.use("/socials", socialsRouter);
 
-app.use(".netlify/functions/api", router);
+app.use("/", router);
 
 export const handler = serverless(app);
