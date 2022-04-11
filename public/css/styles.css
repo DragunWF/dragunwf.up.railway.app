@@ -281,6 +281,34 @@ header .logo {
   }
 }
 
+@media screen and (max-width: 780px) {
+  .page-container h1 {
+    font-size: 5.5rem;
+  }
+
+  .page-container h2 {
+    font-size: 3.5rem;
+  }
+
+  .page-container p {
+    width: 95%;
+  }
+
+  .home-socials li {
+    display: inline-block;
+    margin-top: 2rem;
+    vertical-align: top;
+  }
+
+  .social-item a {
+    font-size: 1.5rem;
+  }
+
+  #home-text p {
+    padding-top: 15px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .page-container,
   .content header {
@@ -298,7 +326,7 @@ header .logo {
   }
 
   .page-container h1 {
-    font-size: 5.3rem;
+    font-size: 5.1rem;
     margin-bottom: 0.8rem;
   }
 
@@ -345,6 +373,7 @@ header .logo {
   border-radius: 5px;
   border: 0;
   box-shadow: 5px 5px #c4c4c4;
+  color: #111;
   font-size: 2.2rem;
   padding: 1rem;
   transition: all 0.25s;
