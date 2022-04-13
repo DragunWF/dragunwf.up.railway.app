@@ -63,11 +63,11 @@ footer {
 
 .text-link {
   color: #5fed5f;
-  transition: all 0.15s;
+  transition: color 0.15s;
 }
 
 .text-link:hover {
-  color: #047307;
+  color: #0bb810;
 }
 
 /* Main */
@@ -113,7 +113,7 @@ footer {
 }
 
 .footer-text {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .button-misc {
