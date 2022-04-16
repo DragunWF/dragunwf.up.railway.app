@@ -240,6 +240,13 @@ footer {
   margin-top: 45px;
 }
 
+@media screen and (max-width: 780px) {
+  .projects-container li,
+  .projects-container p {
+    width: 390px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .projects-container li,
   .projects-container p {
