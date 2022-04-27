@@ -1,8 +1,8 @@
 # dragunwf.herokuapp.com
 
-![GitHub top language](https://img.shields.io/github/languages/top/DragunWF/Python-Mini-Projects)
-![Lines of code](https://img.shields.io/tokei/lines/github/DragunWF/Python-Mini-Projects)
-![GitHub repo size](https://img.shields.io/github/repo-size/DragunWF/Python-Mini-Projects)
+![GitHub top language](https://img.shields.io/github/languages/top/DragunWF/dragunwf.herokuapp.com)
+![Lines of code](https://img.shields.io/tokei/lines/github/DragunWF/dragunwf.herokuapp.com)
+![GitHub repo size](https://img.shields.io/github/repo-size/DragunWF/dragunwf.herokuapp.com)
 
 ## Description:
 
