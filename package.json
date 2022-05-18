@@ -2,11 +2,11 @@
   "name": "dragunwf.herokuapp.com",
   "version": "1.0.0",
   "description": "My personal website.",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "devStart": "nodemon index.js"
+    "start": "node app.js",
+    "devStart": "nodemon app.js"
   },
   "repository": {
     "type": "git",
