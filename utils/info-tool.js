@@ -66,12 +66,16 @@ class InfoTool {
       {
         name: "Benefits of Saving",
         link: "https://benefits-of-saving.herokuapp.com/",
-        description: "",
+        description:
+          "A single web page application with a visit counter near the header. Made as " +
+          "my submission for a performance task in school.",
       },
       {
         name: "Safety Protocols in Hiking",
         link: "https://hiking-safety-protocols.netlify.app/",
-        description: "",
+        description:
+          "A single web page application serving the purpose of an infographic. Made as " +
+          "my submission for a project in my P.E class in school.",
       },
     ],
     gameApplications: [
@@ -93,7 +97,7 @@ class InfoTool {
         name: "Galactic n' Guns",
         link: "https://dragonwf.itch.io/galactic-n-guns",
         description:
-          "A space shooter game where you can shoot down alien ships. Made from" +
+          "A space shooter game where you can shoot down alien ships. Made from " +
           "scratch with PyGame and Python.",
       },
       {
@@ -113,7 +117,8 @@ class InfoTool {
   };
 
   static getPageId(pageName) {
-    if (this.#checkListIfExists(pageName)) return this.#pageIds[pageName];
+    if (this.#checkListIfExists(pageName, this.#pageIds))
+      return this.#pageIds[pageName];
     else
       throw new Error(
         "Page string is not in the list of names for page IDs. Please check your string reference."
@@ -121,7 +126,8 @@ class InfoTool {
   }
 
   static getSocialId(socialName) {
-    if (this.#checkListIfExists(socialName)) return this.#socialIds[socialName];
+    if (this.#checkListIfExists(socialName, this.#socialIds))
+      return this.#socialIds[socialName];
     else
       throw new Error(
         "Social string is not in the list of names for social IDs. Please check your string reference."
