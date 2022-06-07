@@ -34,67 +34,20 @@
         class="container projects-container text flex-object"
         data-aos="zoom-in"
       >
-        <h2>Automation & Bots</h2>
+        <h2>Game Applications</h2>
         <ul>
+          <% data.gameApplications.forEach(project => { %>
           <li>
             <a
-              href="https://github.com/DragunWF/Ancalagon"
+              href="<%= project.link %>"
               target="_blank"
               class="project-title text-link"
-              >Ancalagon</a
             >
-            - A discord bot written in JavaScript personalized for my discord
-            server.
+              <%= project.name %>
+            </a>
+            - <%= project.description %>
           </li>
-          <li>
-            <a
-              href="https://github.com/DragunWF/Scarlet"
-              target="_blank"
-              class="project-title text-link"
-              >Scarlet</a
-            >
-            - A private discord bot written in JavaScript for personal use with
-            a MySQL database to monitor my server.
-          </li>
-          <li>
-            <a
-              href="https://github.com/DragunWF/Cookie-Clicker-Bot"
-              target="_blank"
-              class="project-title text-link"
-              >Cookie Clicker Bot</a
-            >
-            - A bot powered with Selenium that automates the game, Cookie
-            Clicker.
-          </li>
-          <li>
-            <a
-              href="https://github.com/DragunWF/TypeRacer-Bot"
-              target="_blank"
-              class="project-title text-link"
-              >TypeRacer Bot</a
-            >
-            - A bot that automates typeracer.com. In practice mode of course.
-          </li>
-          <li>
-            <a
-              href="https://github.com/DragunWF/AutoJoinZoom"
-              target="_blank"
-              class="project-title text-link"
-              >AutoJoinZoom</a
-            >
-            - An automation bot programmed with Python used to automatically
-            join my zoom classes.
-          </li>
-          <li>
-            <a
-              href="https://github.com/DragunWF/DragonBot"
-              target="_blank"
-              class="project-title text-link"
-              >DragonBot</a
-            >
-            - A discord bot written in Python. This was my first big project
-            with Python.
-          </li>
+          <% }) %>
         </ul>
       </div>
       <div
@@ -102,67 +55,41 @@
         data-aos="zoom-in"
       >
         <h2>Web Applications</h2>
-          <ul>
-            <li>
-              <a
-                href="https://benefits-of-saving.herokuapp.com/"
-                target="_blank"
-                class="project-title text-link"
-                >Benefits of Saving</a
-              >
-              - A single web page application for a performance task in my school;
-              made with ExpressJS. Mainly made for the purpose of being an
-              infographic.
-            </li>
-          </ul>
+        <ul>
+          <% data.webApplications.forEach(project => { %>
+          <li>
+            <a
+              href="<%= project.link %>"
+              target="_blank"
+              class="project-title text-link"
+            >
+              <%= project.name %>
+            </a>
+            - <%= project.description %>
+          </li>
+          <% }) %>
         </ul>
       </div>
       <div
-      class="container projects-container text flex-object"
-      data-aos="zoom-in"
-    >
-      <h2>Game Applications</h2>
+        class="container projects-container text flex-object"
+        data-aos="zoom-in"
+      >
+        <h2>Automation & Bots</h2>
         <ul>
+          <% data.automationAndBots.forEach(project => { %>
           <li>
             <a
-              href="https://dragonwf.itch.io/mage-alteration"
+              href="<%= project.link %>"
               target="_blank"
               class="project-title text-link"
-              >Mage Alteration</a
             >
-            - My submission for the 2021 PyGame community new years game jam.
+              <%= project.name %>
+            </a>
+            - <%= project.description %>
           </li>
-          <li>
-            <a
-              href="https://dragonwf.itch.io/galactic-n-guns"
-              target="_blank"
-              class="project-title text-link"
-              >Galactic n' Guns</a
-            >
-            - A space shooter game made from scratch with Python and PyGame.
-          </li>
-          <li>
-            <a
-              href="https://dragonwf.itch.io/blue-warcook"
-              target="_blank"
-              class="project-title text-link"
-              >Blue Warcook</a
-            >
-            - A shooter game made from scratch with Python and PyGame.
-          </li>
-          <li>
-            <a
-              href="https://dragonwf.itch.io/gem-collector"
-              target="_blank"
-              class="project-title text-link"
-              >Gem Collector</a
-            >
-            - A practice project made with the Unity Engine with the purpose of
-            it just being a learning experience for me.
-          </li>
+          <% }) %>
         </ul>
-      </ul>
-    </div>
+      </div>
       <div
         class="container projects-container text flex-object"
         data-aos="zoom-in"
@@ -181,7 +108,7 @@
         </p>
       </div>
       <div data-aos="zoom-in">
-        <div class="button-misc return-to-home">
+        <div class="button-misc return-to-home" id="projectsBackToHomeButton">
           <a href="/" class="text">Back to Home Page</a>
         </div>
       </div>
