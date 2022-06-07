@@ -390,7 +390,10 @@ header .logo {
 #p1,
 #p2,
 #p3,
-#p4 {
+#p4,
+#p5,
+#p6,
+#p7 {
   display: none;
 }
 
@@ -399,7 +402,10 @@ header .logo {
   #p1,
   #p2,
   #p3,
-  #p4 {
+  #p4,
+  #p5,
+  #p6,
+  #p7 {
     text-align: left;
   }
 }
