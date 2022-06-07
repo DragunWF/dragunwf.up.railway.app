@@ -96,6 +96,10 @@ footer {
   margin-top: 40px;
 }
 
+#projectsBackToHomeButton {
+  margin-top: 0;
+}
+
 .disclaimer h2 {
   margin-bottom: 1.3rem;
 }
