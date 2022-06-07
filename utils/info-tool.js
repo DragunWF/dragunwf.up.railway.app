@@ -84,14 +84,15 @@ class InfoTool {
         link: "https://dragonwf.itch.io/undying-mage",
         description:
           "A game where you play as a mage who gets stronger with each death he gets. Made with " +
-          "the Unity Engine and C#. A submission for GameDev.tv's 2022 game jam.",
+          "the Unity Engine and C#. My submission for GameDev.tv's 2022 game jam.",
       },
       {
         name: "Mage Alteration",
         link: "https://dragonwf.itch.io/mage-alteration",
         description:
           "A game where you can power up your mage through mutations and powerups. " +
-          "Made from scratch with PyGame and Python.",
+          "Made from scratch with PyGame and Python. My submission for the PyGame " +
+          "community new years 2021 game jam.",
       },
       {
         name: "Galactic n' Guns",
