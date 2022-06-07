@@ -27,7 +27,6 @@ header {
 }
 
 header h1 {
-  border-bottom: 1px solid #d3d3d3;
   font-size: 2.8rem;
   letter-spacing: 0.2rem;
 }
@@ -218,7 +217,12 @@ footer {
 }
 
 /* Projects Page */
+.projects-content {
+  gap: 35px;
+}
+
 .projects-container {
+  display: grid;
   padding: 30px;
 }
 
@@ -234,10 +238,6 @@ footer {
 
 .projects-container li {
   width: 50rem;
-}
-
-#moreInfo {
-  margin-top: 45px;
 }
 
 @media screen and (max-width: 780px) {
