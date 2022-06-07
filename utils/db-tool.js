@@ -11,6 +11,7 @@ const db = mysql.createPool({
 });
 
 // My timezone is GMT+8. MySQL by default uses UTC time when outputing CURTIME() or CURDATE()
+// I won't be using these constant variables right now
 const myTime = 'ADDTIME(CURTIME(), "08:00")';
 const myDate = 'ADDTIME(NOW(), "08:00")';
 
