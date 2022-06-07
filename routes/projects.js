@@ -10,7 +10,13 @@ projectsRouter.get("/", (req, res) => {
 });
 
 projectsRouter.get("/list", (req, res) => {
-  res.render("projects-list");
+  res.render("projects-list", {
+    data: {
+      webApplications: InfoTool.getProjectsList("webApplications"),
+      gameApplications: InfoTool.getProjectsList("gameApplications"),
+      automationAndBots: InfoTool.getProjectsList("automationAndBots"),
+    },
+  });
   DatabaseTool.insertPageVisit(InfoTool.getPageId("projectsList"));
 });
 
