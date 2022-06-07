@@ -7,6 +7,7 @@ import contactRouter from "./routes/contact.js";
 import socialsRouter from "./routes/socials.js";
 
 import DatabaseTool from "./utils/db-tool.js";
+import InfoTool from "./utils/info-tool.js";
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -16,12 +17,12 @@ app.use("/public", express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("index");
-  DatabaseTool.insertPageVisit(1);
+  DatabaseTool.insertPageVisit(InfoTool.getPageId("home"));
 });
 
 app.get("/about", (req, res) => {
   res.render("about");
-  DatabaseTool.insertPageVisit(2);
+  DatabaseTool.insertPageVisit(InfoTool.getPageId("about"));
 });
 
 app.use("/skills", skillsRouter);
