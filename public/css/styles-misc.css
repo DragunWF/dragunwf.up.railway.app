@@ -4,7 +4,6 @@
   --color-text: #fff;
 }
 
-/* #9966cc (Color code for amethyst color) */
 ::selection {
   color: var(--color-text);
   background: #046307;
