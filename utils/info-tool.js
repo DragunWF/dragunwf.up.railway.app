@@ -113,15 +113,29 @@ class InfoTool {
   };
 
   static getPageId(pageName) {
-    return this.#pageIds[pageName];
+    if (this.#checkListIfExists(pageName)) return this.#pageIds[pageName];
+    else
+      throw new Error(
+        "Page string is not in the list of names for page IDs. Please check your string reference."
+      );
   }
 
   static getSocialId(socialName) {
-    return this.#socialIds[socialName];
+    if (this.#checkListIfExists(socialName)) return this.#socialIds[socialName];
+    else
+      throw new Error(
+        "Social string is not in the list of names for social IDs. Please check your string reference."
+      );
   }
 
   static getProjectsList(category = null) {
     return category ? this.#projectsList[category] : this.#projectsList;
+  }
+
+  static #checkListIfExists(stringReferenceForId, list) {
+    const items = [];
+    for (let item in list) items.push(item);
+    return items.includes(stringReferenceForId);
   }
 }
 
