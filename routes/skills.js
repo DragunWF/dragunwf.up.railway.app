@@ -10,7 +10,16 @@ skillsRouter.get("/", (req, res) => {
 });
 
 skillsRouter.get("/more", (req, res) => {
-  res.render("skills-info");
+  res.render("skills-info", {
+    data: {
+      languages: InfoTool.getSkillsList("languages"),
+      misc: InfoTool.getSkillsList("misc"),
+      technologies: InfoTool.getSkillsList("technologies"),
+      concatenateSkills: (skills) => {
+        return;
+      },
+    },
+  });
   DatabaseTool.insertPageVisit(InfoTool.getPageId("skillsInfo"));
 });
 
