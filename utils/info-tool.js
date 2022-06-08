@@ -165,7 +165,9 @@ class InfoTool {
         throw new Error("Unknown category chosen for IDs");
     }
 
-    if (this.#checkListIfExists(idString, list)) return list[idString];
+    if (this.#checkListIfExists(idString, list)) 
+      return list[idString];
+
     const errorString = category === "pages" ? "page" : "social";
     const capitalized = `${errorString
       .charAt(0)
