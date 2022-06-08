@@ -119,7 +119,20 @@ class InfoTool {
   static #skillsList = {
     languages: ["Python", "JavaScript", "HTML & CSS", "C#", "SQL"],
     misc: ["4 Kyu Codewars", "100+ WPM Typing Speed", "Gimp", "Piskel"],
-    technologies: [{}, {}],
+    technologies: [
+      {
+        category: "Web Development",
+        skills: ["Node.js", "Express.js", "jQuery"],
+      },
+      { category: "Game Development", skills: ["Unity Engine", "PyGame"] },
+      {
+        category: "Bots/Automation",
+        skills: ["Selenium.py", "Discord.js", "PyAutoGUI"],
+      },
+      { category: "Databases", skills: ["MySQL", "SQLite"] },
+      { category: "Source Control", skills: ["Git", "GitHub"] },
+      { category: "Operating Systems", skills: ["Windows", "MacOS"] },
+    ],
   };
 
   static getPageId(pageName) {
