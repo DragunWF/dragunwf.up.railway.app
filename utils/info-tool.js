@@ -116,27 +116,56 @@ class InfoTool {
       },
     ],
   };
+  static #skillsList = {
+    languages: ["Python", "JavaScript", "HTML & CSS", "C#", "SQL"],
+    misc: ["4 Kyu Codewars", "100+ WPM Typing Speed", "Gimp", "Piskel"],
+    technologies: [{}, {}],
+  };
 
   static getPageId(pageName) {
-    if (this.#checkListIfExists(pageName, this.#pageIds))
-      return this.#pageIds[pageName];
-    else
-      throw new Error(
-        "Page string is not in the list of names for page IDs. Please check your string reference."
-      );
+    return this.#getId(pageName, "pages");
   }
 
   static getSocialId(socialName) {
-    if (this.#checkListIfExists(socialName, this.#socialIds))
-      return this.#socialIds[socialName];
-    else
-      throw new Error(
-        "Social string is not in the list of names for social IDs. Please check your string reference."
-      );
+    return this.#getId(socialName, "socials");
   }
 
   static getProjectsList(category = null) {
     return category ? this.#projectsList[category] : this.#projectsList;
+  }
+
+  static getSkillsList(category = null) {
+    return category ? this.#skillsList[category] : this.#skillsList;
+  }
+
+  static #getId(idString, category) {
+    let list;
+
+    switch (category.toLowerCase()) {
+      case "pages":
+        list = this.#pageIds;
+        break;
+      case "socials":
+        list = this.#socialIds;
+        break;
+      default:
+        throw new Error("Unknown category chosen for IDs");
+    }
+
+    if (this.#checkListIfExists(idString, list)) return list[idString];
+    else {
+      const errorString = category == "pages" ? "page" : "social";
+      const capitalized = `${errorString
+        .charAt(0)
+        .toUpperCase()}${errorString.substring(1)}`;
+      throw new Error(
+        `${capitalized} string is not in the list of names for ${errorString} IDs. Please check your string reference.`
+      );
+    }
+  }
+
+  static #getList(listType) {
+    return;
   }
 
   static #checkListIfExists(stringReferenceForId, list) {
