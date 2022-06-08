@@ -1,0 +1,3 @@
+class GeneralTool {
+  static concatenateSkills() {}
+}
