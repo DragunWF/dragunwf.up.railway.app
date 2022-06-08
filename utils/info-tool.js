@@ -131,11 +131,11 @@ class InfoTool {
   }
 
   static getProjectsList(category = null) {
-    return category ? this.#projectsList[category] : this.#projectsList;
+    return this.#getList("projects", category);
   }
 
   static getSkillsList(category = null) {
-    return category ? this.#skillsList[category] : this.#skillsList;
+    return this.#getList("skills", category);
   }
 
   static #getId(idString, category) {
@@ -153,19 +153,23 @@ class InfoTool {
     }
 
     if (this.#checkListIfExists(idString, list)) return list[idString];
-    else {
-      const errorString = category == "pages" ? "page" : "social";
-      const capitalized = `${errorString
-        .charAt(0)
-        .toUpperCase()}${errorString.substring(1)}`;
-      throw new Error(
-        `${capitalized} string is not in the list of names for ${errorString} IDs. Please check your string reference.`
-      );
-    }
+    const errorString = category == "pages" ? "page" : "social";
+    const capitalized = `${errorString
+      .charAt(0)
+      .toUpperCase()}${errorString.substring(1)}`;
+    throw new Error(
+      `${capitalized} string is not in the list of names for ${errorString} IDs. ` +
+        "Please check your string reference."
+    );
   }
 
-  static #getList(listType) {
-    return;
+  static #getList(type, category) {
+    const availableListTypes = ["projects", "skills"];
+    if (availableListTypes.includes(type)) {
+      const list = type === "projects" ? this.#projectsList : this.#skillsList;
+      return category ? list[category] : list;
+    }
+    throw new Error("Unknown list type!");
   }
 
   static #checkListIfExists(stringReferenceForId, list) {
