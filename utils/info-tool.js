@@ -166,7 +166,7 @@ class InfoTool {
     }
 
     if (this.#checkListIfExists(idString, list)) return list[idString];
-    const errorString = category == "pages" ? "page" : "social";
+    const errorString = category === "pages" ? "page" : "social";
     const capitalized = `${errorString
       .charAt(0)
       .toUpperCase()}${errorString.substring(1)}`;
