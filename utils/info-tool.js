@@ -118,7 +118,7 @@ class InfoTool {
   };
   static #skillsList = {
     languages: ["Python", "JavaScript", "HTML & CSS", "C#", "SQL"],
-    misc: ["4 Kyu Codewars", "100+ WPM Typing Speed", "Gimp", "Piskel"],
+    misc: ["100+ WPM Typing Speed", "4 Kyu Codewars", "Gimp", "Piskel"],
     technologies: [
       {
         category: "Web Development",
