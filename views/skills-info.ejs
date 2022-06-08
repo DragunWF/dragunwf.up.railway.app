@@ -30,20 +30,17 @@
             <h2>Known Languages</h2>
             <p>This includes both programming and markup languages</p>
             <ul>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>HTML & CSS</li>
-              <li>SQL</li>
-              <li>C#</li>
+              <% data.languages.forEach(skill => { %>
+              <li><%= skill %></li>
+              <% }) %>
             </ul>
           </div>
           <div class="container" data-aos="fade-right">
             <h2>Miscellaneous</h2>
             <ul>
-              <li>100 WPM+ Typing Speed</li>
-              <li>4 Kyu CodeWars</li>
-              <li>Gimp</li>
-              <li>Pixelorama</li>
+              <% data.misc.forEach(skill => { %>
+              <li><%= skill %></li>
+              <% }) %>
             </ul>
           </div>
         </div>
@@ -52,38 +49,15 @@
             <h2>Technologies</h2>
             <p>This excludes languages listed in the languages section</p>
             <ul>
+              <% data.technologies.forEach(item => { %>
               <li>
-                <b>Web Development:</b>
-                <br />
-                <span class="skills-text">Node.js, Express.js, jQuery</span>
-              </li>
-              <li>
-                <b>Game Development:</b>
-                <br />
-                <span class="skills-text">Unity Engine, PyGame</span>
-              </li>
-              <li>
-                <b>Bots/Automation:</b>
+                <b><%= item.category %></b>
                 <br />
                 <span class="skills-text"
-                  >Selenium.py, Discord.js, PyAutoGUI</span
+                  ><%= data.concatenateSkills(item.skills) %></span
                 >
               </li>
-              <li>
-                <b>Databases:</b>
-                <br />
-                <span class="skills-text">MySQL, SQLite</span>
-              </li>
-              <li>
-                <b>Source Control:</b>
-                <br />
-                <span class="skills-text">Git, GitHub</span>
-              </li>
-              <li>
-                <b>Operating Systems:</b>
-                <br />
-                <span class="skills-text">Windows, MacOS</span>
-              </li>
+              <% }) %>
             </ul>
           </div>
         </div>
