@@ -8,7 +8,7 @@ DO BEGIN
 	INSERT INTO monthly_visits (page_visits, link_visits, date)
     VALUES ((SELECT COUNT(*) FROM page_visits),
 			(SELECT COUNT(*) FROM link_clicks),
-            CURTIME());
+             DATE_FORMAT(DATE_SUB(CURTIME(), INTERVAL 1 MONTH), "%M %Y"));
             
     DELETE FROM visits;
     DELETE FROM link_clicks;
