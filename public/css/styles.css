@@ -100,6 +100,7 @@ header {
 
 header .logo {
   color: var(--color-text);
+  padding-top: 5px;
 }
 
 .toggle {
@@ -112,6 +113,12 @@ header .logo {
 
 .toggle.active {
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    padding-left: 2rem;
+  }
 }
 
 /* Navigation Menu */
@@ -144,6 +151,11 @@ header .logo {
   color: #03a9f4;
 }
 
+#navIcon {
+  display: flex;
+  padding-bottom: 5px;
+}
+
 @media screen and (max-width: 1024px) {
   .menu {
     width: 250px;
@@ -158,6 +170,8 @@ header .logo {
   #navIcon {
     margin-left: 45px;
     padding-left: 80px;
+    padding-bottom: 0;
+    padding-top: 2px;
   }
 }
 
@@ -318,10 +332,6 @@ header .logo {
     align-items: center;
     padding-left: 10px;
     text-align: center;
-  }
-
-  .logo {
-    padding-left: 2rem;
   }
 
   .content.active {
