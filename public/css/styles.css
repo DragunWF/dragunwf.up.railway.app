@@ -143,6 +143,10 @@ header .logo {
   color: #03a9f4;
 }
 
+#navIcon {
+  display: flex;
+}
+
 @media screen and (max-width: 1024px) {
   .menu {
     width: 250px;
