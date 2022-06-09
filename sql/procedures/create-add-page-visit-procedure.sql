@@ -7,7 +7,7 @@ CREATE PROCEDURE add_page_visit
 )
 BEGIN
 	INSERT INTO visits (page_id, date, hour)
-    VALUES (visited_page_id, CURTIME(), NOW(); 
+    VALUES (visited_page_id, CURTIME(), NOW()); 
 END $$
 
 DELIMITER ;

@@ -7,7 +7,7 @@ CREATE PROCEDURE add_link_visit
 )
 BEGIN
 	INSERT INTO link_clicks (link_id, date, hour)
-    VALUES (visited_link_id, CURTIME(), NOW(); 
+    VALUES (visited_link_id, CURTIME(), NOW()); 
 END $$
 
 DELIMITER ;
