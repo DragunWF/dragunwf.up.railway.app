@@ -8,6 +8,11 @@
 
 Hello! This is my new personal website. A replacement of my previous website.
 
+This website has a MySQL database to track page visits and link clicks. Other than that
+this is just a personal website where I display various different types of information
+about myself and other things like my projects and skills. Feel free to take a look around
+my digital realm :)
+
 ## Links:
 
 - [dragunwf.herokuapp.com](https://dragunwf.herokuapp.com/)
