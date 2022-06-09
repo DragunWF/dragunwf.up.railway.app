@@ -1,7 +1,7 @@
-DROP PROCEDURE IF EXISTS add_social_visit;
+DROP PROCEDURE IF EXISTS add_link_visit;
 
 DELIMITER $$
-CREATE PROCEDURE add_social_visit
+CREATE PROCEDURE add_link_visit
 (
 	visited_link_id INT
 )
