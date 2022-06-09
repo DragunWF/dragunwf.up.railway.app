@@ -2,12 +2,7 @@
 
 :root {
   --color-text: #fff;
-  --color-button: #fff;
-  --color-button-text: #111;
-  --color-button-shadow: #c4c4c4;
   --color-content-bar: #111;
-  --color-text-link: #5fed5f;
-  --color-text-link-hover: #0bb810;
 }
 
 ::selection {
@@ -68,12 +63,12 @@ footer {
 }
 
 .text-link {
-  color: var(--color-text-link);
+  color: #5fed5f;
   transition: color 0.15s;
 }
 
 .text-link:hover {
-  color: var(--color-text-link-hover);
+  color: #0bb810;
 }
 
 /* Main */
@@ -127,10 +122,10 @@ footer {
 }
 
 .button-misc {
-  background: var(--color-button);
+  background: #fff;
   border-radius: 15px;
   border: 0;
-  box-shadow: 5px 5px var(--color-button-shadow);
+  box-shadow: 5px 5px #c4c4c4;
   cursor: pointer;
   font-weight: 600;
   padding: 1rem;
@@ -144,7 +139,7 @@ footer {
 }
 
 .button-misc a {
-  color: var(--color-button-text);
+  color: #111;
   padding: 1rem;
   text-decoration: none;
 }

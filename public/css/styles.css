@@ -3,9 +3,7 @@
 :root {
   --overlay-color: purple;
   --color-text: #fff;
-  --color-secondary-text: #111;
-  --color-text-link-hover: #c9c9c9;
-  --color-nav-text-hover: #03a9f4;
+  --color-text-secondary: #111;
 }
 
 ::selection {
@@ -57,8 +55,8 @@ body {
 }
 
 .text-links:hover {
-  border-bottom: 0.1em solid var(--color-text-link-hover);
-  color: var(--color-text-link-hover);
+  border-bottom: 0.1em solid #c9c9c9;
+  color: #c9c9c9;
 }
 
 .text-bold {
@@ -143,11 +141,7 @@ header .logo {
 }
 
 .menu ul li a:hover {
-  color: var(--color-nav-text-hover);
-}
-
-#navIcon {
-  display: flex;
+  color: #03a9f4;
 }
 
 @media screen and (max-width: 1024px) {
