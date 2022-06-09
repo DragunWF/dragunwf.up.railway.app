@@ -3,6 +3,9 @@
 :root {
   --overlay-color: purple;
   --color-text: #fff;
+  --color-secondary-text: #111;
+  --color-text-link-hover: #c9c9c9;
+  --color-nav-text-hover: #03a9f4;
 }
 
 ::selection {
@@ -54,8 +57,8 @@ body {
 }
 
 .text-links:hover {
-  border-bottom: 0.1em solid #c9c9c9;
-  color: #c9c9c9;
+  border-bottom: 0.1em solid var(--color-text-link-hover);
+  color: var(--color-text-link-hover);
 }
 
 .text-bold {
@@ -133,14 +136,14 @@ header .logo {
 }
 
 .menu ul li a {
-  color: #111;
+  color: var(--color-text-secondary);
   font-size: 2.8rem;
   text-decoration: none;
   transition: color 0.15s ease-in;
 }
 
 .menu ul li a:hover {
-  color: #03a9f4;
+  color: var(--color-nav-text-hover);
 }
 
 #navIcon {
@@ -167,7 +170,7 @@ header .logo {
 /* Content */
 .content {
   align-items: center;
-  background: #111;
+  background: var(--color-text-secondary);
   display: flex;
   justify-content: space-between;
   min-height: 100vh;
@@ -256,7 +259,7 @@ header .logo {
 }
 
 .social-item {
-  color: #111;
+  color: var(--color-text-secondary);
   display: block;
   font-size: 1.8rem;
   height: 100%;
@@ -267,7 +270,7 @@ header .logo {
 }
 
 #infoBtn {
-  color: #111;
+  color: var(--color-text-secondary);
   text-decoration: none;
   text-shadow: none;
 }
@@ -379,7 +382,7 @@ header .logo {
   border-radius: 5px;
   border: 0;
   box-shadow: 5px 5px #c4c4c4;
-  color: #111;
+  color: var(--color-text-secondary);
   font-size: 2.2rem;
   padding: 1rem;
   transition: all 0.25s;
