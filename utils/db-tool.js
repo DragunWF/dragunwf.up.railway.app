@@ -1,6 +1,7 @@
 import "dotenv/config";
 import mysql from "mysql";
 
+const developmentMode = false;
 const db = mysql.createPool({
   connectionLimit: 5,
   aquireTimeout: 10000,
@@ -17,17 +18,21 @@ const myDate = 'ADDTIME(NOW(), "08:00")';
 
 class DatabaseTool {
   static insertPageVisit(pageId) {
-    const sqlQuery = `INSERT INTO visits (page_id, date, hour) VALUES (${pageId}, CURTIME(), NOW());`;
-    db.query(sqlQuery, (err, results) => {
-      if (err) console.error(err);
-    });
+    if (!developmentMode) {
+      const sqlQuery = `INSERT INTO visits (page_id, date, hour) VALUES (${pageId}, CURTIME(), NOW());`;
+      db.query(sqlQuery, (err, results) => {
+        if (err) console.error(err);
+      });
+    } else console.log(`Dev Mode: Page ID ${pageId} visited`);
   }
 
   static insertSocialsVisit(linkId) {
-    const sqlQuery = `INSERT INTO link_clicks (link_id, date, hour) VALUES (${linkId}, CURTIME(), NOW());`;
-    db.query(sqlQuery, (err, results) => {
-      if (err) console.error(err);
-    });
+    if (!developmentMode) {
+      const sqlQuery = `INSERT INTO link_clicks (link_id, date, hour) VALUES (${linkId}, CURTIME(), NOW());`;
+      db.query(sqlQuery, (err, results) => {
+        if (err) console.error(err);
+      });
+    } else console.log(`Dev Mode: Social ID ${linkId} visited`);
   }
 }
 
