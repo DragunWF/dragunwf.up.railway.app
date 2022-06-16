@@ -13,12 +13,12 @@ client.on("ready", () => {
 });
 
 function createEmbedMessage(author, message) {
+  const descriptionContent = `**Author:**\n${author}\n\n**Message:**\n${message}`;
   const embed = new Discord.MessageEmbed()
     .setColor(messageEmbedColor)
     .setTitle("Message Form Submission")
-    .setAuthor({ name: author })
-    .setDescription(message)
-    .setFooter({ text: "dragunwf.herokuapp.com/contact/form" })
+    .setDescription(descriptionContent)
+    .setFooter({ text: "dragunwf.herokuapp.com" })
     .setTimestamp();
   return embed;
 }
