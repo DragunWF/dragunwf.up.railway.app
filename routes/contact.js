@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request } from "express";
 import DatabaseTool from "../utils/db-tool.js";
 import InfoTool from "../utils/info-tool.js";
 import sendMessageForm from "../utils/form-bot.js";
@@ -17,7 +17,11 @@ contactRouter.get("/form", (req, res) => {
 
 contactRouter.post("/form", (req, res) => {
   sendMessageForm(req.body);
-  redirect("")
+  res.redirect("form/submitted");
+});
+
+contactRouter.get("/form/submitted", (req, res) => {
+  res.render("form-submitted");
 });
 
 export default contactRouter;
