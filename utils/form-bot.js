@@ -3,7 +3,7 @@ import Discord from "discord.js";
 
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 const messageEmbedColor = "#50C878"; // Emerald Green
-const mailReceiverChannelId = "986967568453615616";
+const mailReceiverChannelIds = ["986967568453615616", "987014510395142154"];
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
@@ -24,9 +24,11 @@ function createEmbedMessage(author, message) {
 }
 
 function sendMessageForm(formBody) {
-  const channel = client.channels.cache.get(mailReceiverChannelId);
   const mailEmbedMessage = createEmbedMessage(formBody.name, formBody.message);
-  channel.send({ embeds: [mailEmbedMessage] });
+  for (let channelId of mailReceiverChannelIds) {
+    const channel = client.channels.cache.get(channelId);
+    channel.send({ embeds: [mailEmbedMessage] });
+  }
 }
 
 client.login(process.env.BOT_TOKEN);
