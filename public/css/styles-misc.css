@@ -240,6 +240,10 @@ footer {
   width: 80%;
 }
 
+#seconds {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
   .form-submitted-content .container {
     width: 68%;
