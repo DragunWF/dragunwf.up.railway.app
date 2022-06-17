@@ -6,8 +6,8 @@ const messageEmbedColor = "#50C878"; // Emerald Green
 const mailReceiverChannelIds = ["986967568453615616", "987014510395142154"];
 
 client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}`);
-  client.user.setActivity(`Dragun's Mails...`, {
+  console.log(`Bot Online: Logged in as ${client.user.tag}`);
+  client.user.setActivity(`DragunWF's Mails...`, {
     type: "WATCHING",
   });
 });
