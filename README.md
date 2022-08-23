@@ -13,6 +13,10 @@ this is just a personal website where I display various different types of infor
 about myself and other things like my projects and skills. Feel free to take a look around
 my digital realm :)
 
+## Hidden Pages:
+
+- [Problems Solved Counter](https://dragunwf.herokuapp.com/problems-solved)
+
 ## Links:
 
 - [dragunwf.herokuapp.com](https://dragunwf.herokuapp.com/)
