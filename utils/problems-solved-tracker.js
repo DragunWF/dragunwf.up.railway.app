@@ -44,11 +44,16 @@ class ProblemsSolvedTracker {
 
   static async getCodewarsStats() {
     const codewarsUsername = "DragonWF"; // Not DragunWF for CodeWars
-    const response = await fetch(
-      `https://www.codewars.com/api/v1/users/${codewarsUsername}`
-    );
-    const stats = await response.json();
-    return stats.codeChallenges.totalCompleted;
+    try {
+      const response = await fetch(
+        `https://www.codewars.com/api/v1/users/${codewarsUsername}`
+      );
+      const stats = await response.json();
+      return stats.codeChallenges.totalCompleted;
+    } catch (err) {
+      console.log(err);
+      return 0;
+    }
   }
 
   static async #scrapeStats(url, tag) {
