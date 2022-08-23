@@ -19,7 +19,7 @@ class ProblemsSolvedTracker {
       ".problems-solved"
     );
     if (data) {
-      const problemsSolvedIndex = 64;
+      const problemsSolvedIndex = 64; // Obtained through testing
       let problemsSolvedStr = "";
       for (let i = problemsSolvedIndex; i < data.length; i++) {
         if (this.#digits.includes(data[i])) problemsSolvedStr += data[i];
