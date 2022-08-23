@@ -21,7 +21,7 @@ class GeneralTool {
   }
 
   static formatProblemsSolved(solvedAmount) {
-    return `${solvedAmount} Problems Solved`;
+    return solvedAmount <= 0 ? "Error" : `${solvedAmount} Problems Solved`;
   }
 }
 
