@@ -19,17 +19,28 @@ class ProblemsSolvedTracker {
       ".problems-solved"
     );
     if (data) {
-      let problemsSolvedStr = [];
-      for (let i = 64; i < data.length; i++) {
-        if (this.#digits.includes(data[i])) problemsSolvedStr.push(data[i]);
+      const problemsSolvedIndex = 64;
+      let problemsSolvedStr = "";
+      for (let i = problemsSolvedIndex; i < data.length; i++) {
+        if (this.#digits.includes(data[i])) problemsSolvedStr += data[i];
         else break;
       }
-      return Number(problemsSolvedStr.join(""));
+      return Number(problemsSolvedStr);
     }
     return 0;
   }
 
-  static async getCodeforcesStats() {}
+  static async getCodeforcesStats() {
+    const data = await this.#scrapeStats(
+      `https://codeforces.com/profile/${this.#username}`,
+      "._UserActivityFrame_counterValue"
+    );
+    if (data) {
+      const problemsSolved = Number(data.split(" ")[0]);
+      return problemsSolved;
+    }
+    return 0;
+  }
 
   static async getCodewarsStats() {
     const response = await fetch(
