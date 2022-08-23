@@ -26,6 +26,11 @@ app.get("/about", (req, res) => {
   DatabaseTool.insertPageVisit(InfoTool.getPageId("about"));
 });
 
+app.get("/problems-solved", (req, res) => {
+  res.render("problems-solved");
+  // Unofficial page
+});
+
 app.use("/skills", skillsRouter);
 app.use("/projects", projectsRouter);
 app.use("/contact", contactRouter);
