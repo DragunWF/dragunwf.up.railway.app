@@ -19,6 +19,10 @@ class GeneralTool {
     }
     return newArray;
   }
+
+  static formatProblemsSolved(solvedAmount) {
+    return `${solvedAmount} Problems Solved`;
+  }
 }
 
 export default GeneralTool;
