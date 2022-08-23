@@ -12,10 +12,50 @@
   </head>
   <body>
     <header class="text flex-object">
-      <h1>Competitive Programming</h1>
+      <h1>Problems Solved</h1>
     </header>
-    <section class="content">
-      <div class="container"></div>
+    <section class="content projects-content flex-object">
+      <div
+        class="container projects-container text flex-object"
+        data-aos="zoom-in"
+      >
+        <h2>Competitive Programming</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.codewars.com/users/DragonWF"
+              target="_blank"
+              class="text-link"
+              >CodeWars:</a
+            >
+            <%= data.codewarsStats %>
+          </li>
+          <li>
+            <a
+              href="https://codeforces.com/profile/DragunWF"
+              target="_blank"
+              class="text-link"
+              >CodeForces:</a
+            >
+            <%= data.codeforcesStats %>
+          </li>
+          <li>
+            <a
+              href="https://www.codechef.com/users/dragunwf"
+              target="_blank"
+              class="text-link"
+              >CodeChef:</a
+            >
+            <%= data.codechefStats %>
+          </li>
+          <li><b>Total:</b> <%= data.totalSolved %></li>
+        </ul>
+      </div>
+      <div data-aos="zoom-in">
+        <div class="button-misc return-to-home" id="projectsBackToHomeButton">
+          <a href="/" class="text">Back to Home Page</a>
+        </div>
+      </div>
     </section>
     <footer class="flex-object">
       <span class="footer-text text"
@@ -28,5 +68,9 @@
         ></span
       >
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
