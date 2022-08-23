@@ -8,6 +8,8 @@ import socialsRouter from "./routes/socials.js";
 
 import DatabaseTool from "./utils/db-tool.js";
 import InfoTool from "./utils/info-tool.js";
+import GeneralTool from "./utils/general-tool.js";
+import ProblemsSolvedTracker from "./utils/problems-solved-tracker.js";
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -26,9 +28,22 @@ app.get("/about", (req, res) => {
   DatabaseTool.insertPageVisit(InfoTool.getPageId("about"));
 });
 
-app.get("/problems-solved", (req, res) => {
-  res.render("problems-solved");
-  // Unofficial page
+app.get("/problems-solved", async (req, res) => {
+  const Tracker = ProblemsSolvedTracker;
+  const codewars = await Tracker.getCodewarsStats();
+  const codeforces = await Tracker.getCodeforcesStats();
+  const codechef = await Tracker.getCodechefStats();
+
+  res.render("problems-solved", {
+    data: {
+      totalSolved: GeneralTool.formatProblemsSolved(
+        codewars + codeforces + codechef
+      ),
+      codewarsStats: GeneralTool.formatProblemsSolved(codewars),
+      codeforcesStats: GeneralTool.formatProblemsSolved(codeforces),
+      codechefStats: GeneralTool.formatProblemsSolved(codechef),
+    },
+  });
 });
 
 app.use("/skills", skillsRouter);
