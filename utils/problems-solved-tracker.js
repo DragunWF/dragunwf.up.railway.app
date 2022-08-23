@@ -15,7 +15,7 @@ class ProblemsSolvedTracker {
 
   static async getCodechefStats() {
     const data = await this.#scrapeStats(
-      `https://codeforces.com/profile/${this.#username.toLowerCase()}`,
+      `https://codechef.com/users/${this.#username.toLowerCase()}`,
       ".problems-solved"
     );
     if (data) {
@@ -43,8 +43,9 @@ class ProblemsSolvedTracker {
   }
 
   static async getCodewarsStats() {
+    const codewarsUsername = "DragonWF"; // Not DragunWF for CodeWars
     const response = await fetch(
-      `https://www.codewars.com/api/v1/users/${this.#username}`
+      `https://www.codewars.com/api/v1/users/${codewarsUsername}`
     );
     const stats = await response.json();
     return stats.codeChallenges.totalCompleted;
