@@ -311,4 +311,8 @@ footer {
   .problems-solved-list {
     font-size: 1.7rem;
   }
+
+  .problems-solved-header {
+    font-size: 2.7rem !important;
+  }
 }
