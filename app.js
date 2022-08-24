@@ -39,7 +39,7 @@ app.get("/problems-solved", async (req, res) => {
       totalSolved: GeneralTool.formatProblemsSolved(
         codewars + codeforces + codechef
       ),
-      codewarsStats: GeneralTool.formatProblemsSolved(codewars),
+      codewarsStats: GeneralTool.formatProblemsSolved(codewars, true),
       codeforcesStats: GeneralTool.formatProblemsSolved(codeforces),
       codechefStats: GeneralTool.formatProblemsSolved(codechef),
     },
