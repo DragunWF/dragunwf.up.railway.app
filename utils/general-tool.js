@@ -20,8 +20,17 @@ class GeneralTool {
     return newArray;
   }
 
-  static formatProblemsSolved(solvedAmount) {
-    return solvedAmount <= 0 ? "Error" : `${solvedAmount} Problems Solved`;
+  static formatNumWithCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  static formatProblemsSolved(solvedAmount, isCodewars = false) {
+    if (solvedAmount) {
+      const formattedAmount = this.formatNumWithCommas(solvedAmount);
+      const problemsString = isCodewars ? "Katas" : "Problems";
+      return `${formattedAmount} ${problemsString} Solved`;
+    }
+    return "Error";
   }
 }
 
