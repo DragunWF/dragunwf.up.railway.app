@@ -168,6 +168,10 @@ footer {
   width: 1rem;
 }
 
+#problemsSolved {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 480px) {
   .skills-container {
     align-items: center;
