@@ -8,6 +8,7 @@ class InfoTool {
     skillsInfo: 6,
     contact: 7,
     messageForm: 8,
+    problemsSolved: 9,
   };
   static #socialIds = {
     github: 1,
@@ -118,7 +119,7 @@ class InfoTool {
   };
   static #skillsList = {
     languages: ["Python", "JavaScript", "HTML & CSS", "C#", "SQL"],
-    misc: ["100+ WPM Typing Speed", "4 Kyu Codewars", "Gimp", "Piskel"],
+    misc: ["100+ WPM Typing Speed", "Gimp", "Piskel"],
     technologies: [
       {
         category: "Web Development",
@@ -165,8 +166,7 @@ class InfoTool {
         throw new Error("Unknown category chosen for IDs");
     }
 
-    if (this.#checkListIfExists(idString, list)) 
-      return list[idString];
+    if (this.#checkListIfExists(idString, list)) return list[idString];
 
     const errorString = category === "pages" ? "page" : "social";
     const capitalized = `${errorString
