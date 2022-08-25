@@ -44,6 +44,8 @@ app.get("/problems-solved", async (req, res) => {
       codechefStats: GeneralTool.formatProblemsSolved(codechef),
     },
   });
+
+  DatabaseTool.insertPageVisit(InfoTool.getPageId("problemsSolved"));
 });
 
 app.use("/skills", skillsRouter);
