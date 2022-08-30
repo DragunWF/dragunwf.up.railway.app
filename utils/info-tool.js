@@ -9,6 +9,7 @@ class InfoTool {
     contact: 7,
     messageForm: 8,
     problemsSolved: 9,
+    deception: 10,
   };
   static #socialIds = {
     github: 1,
