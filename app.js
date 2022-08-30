@@ -48,6 +48,11 @@ app.get("/problems-solved", async (req, res) => {
   DatabaseTool.insertPageVisit(InfoTool.getPageId("problemsSolved"));
 });
 
+app.get("/deception", (req, res) => {
+  DatabaseTool.insertPageVisit(InfoTool.getPageId("deception"));
+  res.redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+});
+
 app.use("/skills", skillsRouter);
 app.use("/projects", projectsRouter);
 app.use("/contact", contactRouter);
