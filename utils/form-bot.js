@@ -3,7 +3,8 @@ import Discord from "discord.js";
 
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 const messageEmbedColor = "#50C878"; // Emerald Green
-const mailReceiverChannelIds = ["986967568453615616", "987014510395142154"];
+const testChannelId = "986967568453615616";
+const mailReceiverChannelIds = [testChannelId, "987014510395142154"];
 
 client.on("ready", () => {
   console.log(`Bot Online: Logged in as ${client.user.tag}`);
@@ -43,7 +44,7 @@ function sendMessageForm(formBody) {
   if (validMessageForm)
     for (let channelId of mailReceiverChannelIds)
       sendMessageToChannel(channelId, formBody);
-  else sendMessageToChannel("986967568453615616", formBody);
+  else sendMessageToChannel(testChannelId, formBody);
 }
 
 client.login(process.env.BOT_TOKEN);
