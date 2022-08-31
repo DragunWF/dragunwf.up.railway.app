@@ -23,12 +23,27 @@ function createEmbedMessage(author, message) {
   return embed;
 }
 
-function sendMessageForm(formBody) {
+function sendMessageToChannel(channelId, formBody) {
   const mailEmbedMessage = createEmbedMessage(formBody.name, formBody.message);
-  for (let channelId of mailReceiverChannelIds) {
-    const channel = client.channels.cache.get(channelId);
-    channel.send({ embeds: [mailEmbedMessage] });
-  }
+  const channel = client.channels.cache.get(channelId);
+  channel.send({ embeds: [mailEmbedMessage] });
+}
+
+function validateMessageForm(formBody) {
+  const message = formBody.message.toUpperCase();
+  const author = formBody.name.toUpperCase();
+  return (
+    !author.includes(process.env.SECRET_WORD) &&
+    !message.includes(process.env.SECRET_WORD)
+  );
+}
+
+function sendMessageForm(formBody) {
+  const validMessageForm = validateMessageForm(formBody);
+  if (validMessageForm)
+    for (let channelId of mailReceiverChannelIds)
+      sendMessageToChannel(channelId, formBody);
+  else sendMessageToChannel("986967568453615616", formBody);
 }
 
 client.login(process.env.BOT_TOKEN);
