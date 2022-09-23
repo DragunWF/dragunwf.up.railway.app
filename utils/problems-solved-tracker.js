@@ -4,6 +4,7 @@ import axios from "axios";
 
 class ProblemsSolvedTracker {
   static #username = "DragunWF";
+  static #codewarsUsername = "DragonWF";
   static #digits = "0123456789";
 
   static async getTotalProblemsSolved() {
@@ -43,10 +44,9 @@ class ProblemsSolvedTracker {
   }
 
   static async getCodewarsStats() {
-    const codewarsUsername = "DragonWF"; // Not DragunWF for CodeWars
     try {
       const response = await fetch(
-        `https://www.codewars.com/api/v1/users/${codewarsUsername}`
+        `https://www.codewars.com/api/v1/users/${this.#codewarsUsername}`
       );
       const stats = await response.json();
       return stats.codeChallenges.totalCompleted;
