@@ -119,7 +119,7 @@ class InfoTool {
     ],
   };
   static #skillsList = {
-    languages: ["Python", "JavaScript", "HTML & CSS", "C#", "SQL"],
+    languages: ["Python", "JavaScript", "HTML & CSS", "C#", "Java", "SQL"],
     misc: ["100+ WPM Typing Speed", "Gimp", "Piskel"],
     technologies: [
       {
@@ -132,6 +132,10 @@ class InfoTool {
         skills: ["Selenium.py", "Discord.js", "PyAutoGUI"],
       },
       { category: "Databases", skills: ["MySQL", "SQLite"] },
+      {
+        category: "Code Editors/IDEs",
+        skills: ["VSCode", "Visual Studio", "NetBeans"],
+      },
       { category: "Source Control", skills: ["Git", "GitHub"] },
       { category: "Operating Systems", skills: ["Windows", "MacOS"] },
     ],
