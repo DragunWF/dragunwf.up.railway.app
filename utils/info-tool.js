@@ -119,8 +119,8 @@ class InfoTool {
     ],
   };
   static #skillsList = {
-    languages: ["Python", "JavaScript", "HTML & CSS", "C#", "Java", "SQL"],
-    misc: ["100+ WPM Typing Speed", "Gimp", "Piskel"],
+    languages: ["Python", "JavaScript", "HTML & CSS", "C", "C#", "Java", "SQL"],
+    misc: ["100-135 WPM QWERTY", "Gimp", "Piskel"],
     technologies: [
       {
         category: "Web Development",
@@ -137,7 +137,7 @@ class InfoTool {
         skills: ["VSCode", "Visual Studio", "NetBeans"],
       },
       { category: "Source Control", skills: ["Git", "GitHub"] },
-      { category: "Operating Systems", skills: ["Windows", "MacOS"] },
+      { category: "Operating Systems", skills: ["Windows", "Linux", "MacOS"] },
     ],
   };
 
