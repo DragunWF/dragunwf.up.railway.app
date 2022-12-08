@@ -19,7 +19,7 @@ my digital realm :)
 
 ## Links:
 
-- [dragunwf.herokuapp.com](https://dragunwf.up.railway.app/)
+- [Link to the website](https://dragunwf.up.railway.app/)
 - [My Previous Website](https://dragonwf.netlify.app/)
 
 ## Attributions:
