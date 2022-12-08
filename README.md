@@ -1,4 +1,4 @@
-# dragunwf.herokuapp.com
+# DragunWF Web App
 
 ![GitHub top language](https://img.shields.io/github/languages/top/DragunWF/dragunwf.herokuapp.com)
 ![Lines of code](https://img.shields.io/tokei/lines/github/DragunWF/dragunwf.herokuapp.com)
@@ -15,11 +15,11 @@ my digital realm :)
 
 ## Special Pages:
 
-- [Problems Solved Counter](https://dragunwf.herokuapp.com/problems-solved)
+- [Problems Solved Counter](https://dragunwf.up.railway.app/problems-solved)
 
 ## Links:
 
-- [dragunwf.herokuapp.com](https://dragunwf.herokuapp.com/)
+- [dragunwf.herokuapp.com](https://dragunwf.up.railway.app/)
 - [My Previous Website](https://dragonwf.netlify.app/)
 
 ## Attributions:
