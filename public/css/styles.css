@@ -402,11 +402,7 @@ header .logo {
 
 #p1,
 #p2,
-#p3,
-#p4,
-#p5,
-#p6,
-#p7 {
+#p3 {
   display: none;
 }
 
@@ -414,11 +410,7 @@ header .logo {
   #p0,
   #p1,
   #p2,
-  #p3,
-  #p4,
-  #p5,
-  #p6,
-  #p7 {
-    text-align: left;
+  #p3 {
+    text-align: center;
   }
 }

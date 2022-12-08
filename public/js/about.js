@@ -5,7 +5,7 @@ $(document).ready(() => {
   let infoIndex = 0;
 
   function updateAboutText() {
-    const indexLimit = 7;
+    const indexLimit = 3;
     if (infoIndex > indexLimit) infoIndex = 0;
     else if (infoIndex < 0) infoIndex = indexLimit;
 
