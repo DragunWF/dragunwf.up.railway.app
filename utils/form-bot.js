@@ -19,7 +19,7 @@ function createEmbedMessage(author, message) {
     .setColor(messageEmbedColor)
     .setTitle("Message Form Submission")
     .setDescription(descriptionContent)
-    .setFooter({ text: "dragunwf.herokuapp.com" })
+    .setFooter({ text: "dragunwf.up.railway.app" })
     .setTimestamp();
   return embed;
 }
