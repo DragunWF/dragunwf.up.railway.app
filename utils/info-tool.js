@@ -29,8 +29,8 @@ class InfoTool {
           "with some utility and fun commands to try out.",
       },
       {
-        name: "AutoJoinZoom",
-        link: "https://github.com/DragunWF/AutoJoinZoom",
+        name: "Zoom Bot",
+        link: "https://github.com/DragunWF/Zoom-Bot",
         description:
           "An automation bot used for automatically joining zoom meetings. I created " +
           "this bot with the sole purpose of using it to join my zoom classes with ease.",
@@ -87,6 +87,13 @@ class InfoTool {
         description:
           "A game where you play as a mage who gets stronger with each death he gets. Made with " +
           "the Unity Engine and C#. My submission for GameDev.tv's 2022 game jam.",
+      },
+      {
+        name: "Geo-Shooter",
+        link: "https://dragonwf.itch.io/geo-shooter",
+        description:
+          "My submission for GeoJam 2022. It is a game where you simply play as a triangle " +
+          "shooting enemies that come towards you.",
       },
       {
         name: "Mage Alteration",
