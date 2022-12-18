@@ -145,6 +145,7 @@ class InfoTool {
       },
       { category: "Source Control", skills: ["Git", "GitHub"] },
       { category: "Operating Systems", skills: ["Windows", "Linux", "MacOS"] },
+      { category: "Linux Distros", skills: ["Ubuntu", "Mint"] },
     ],
   };
 
