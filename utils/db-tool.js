@@ -13,6 +13,10 @@ const db = mysql.createPool({
 
 class DatabaseTool {
   static insertPageVisit(pageId) {
+    if (!pageId) {
+      throw new Error("Missing argument!");
+    }
+
     if (!developmentMode) {
       const sqlQuery = `CALL add_page_visit(${pageId})`;
       db.query(sqlQuery, (err, results) => {
@@ -22,6 +26,10 @@ class DatabaseTool {
   }
 
   static insertSocialsVisit(linkId) {
+    if (!linkId) {
+      throw new Error("Missing argument!");
+    }
+
     if (!developmentMode) {
       const sqlQuery = `CALL add_link_visit(${linkId})`;
       db.query(sqlQuery, (err, results) => {

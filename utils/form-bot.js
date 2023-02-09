@@ -14,6 +14,10 @@ client.on("ready", () => {
 });
 
 function createEmbedMessage(author, message) {
+  if (!author || !message) {
+    throw new Error("Missing arguments!");
+  }
+
   const descriptionContent = `**Author:**\n${author}\n\n**Message:**\n${message}`;
   const embed = new Discord.MessageEmbed()
     .setColor(messageEmbedColor)
@@ -25,12 +29,20 @@ function createEmbedMessage(author, message) {
 }
 
 function sendMessageToChannel(channelId, formBody) {
+  if (!channelId || !formBody) {
+    throw new Error("Missing arguments!");
+  }
+
   const mailEmbedMessage = createEmbedMessage(formBody.name, formBody.message);
   const channel = client.channels.cache.get(channelId);
   channel.send({ embeds: [mailEmbedMessage] });
 }
 
 function validateMessageForm(formBody) {
+  if (!formBody) {
+    throw new Error("Missing argument!");
+  }
+
   const message = formBody.message.toUpperCase();
   const author = formBody.name.toUpperCase();
   return (
@@ -40,6 +52,10 @@ function validateMessageForm(formBody) {
 }
 
 function sendMessageForm(formBody) {
+  if (!formBody) {
+    throw new Error("Missing argument!");
+  }
+
   const validMessageForm = validateMessageForm(formBody);
   if (validMessageForm)
     for (let channelId of mailReceiverChannelIds)

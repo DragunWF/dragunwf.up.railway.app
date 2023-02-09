@@ -166,8 +166,11 @@ class InfoTool {
   }
 
   static #getId(idString, category) {
-    let list;
+    if (!idString || !category) {
+      throw new Error("Missing arguments!");
+    }
 
+    let list;
     switch (category.toLowerCase()) {
       case "pages":
         list = this.#pageIds;
@@ -179,7 +182,9 @@ class InfoTool {
         throw new Error("Unknown category chosen for IDs");
     }
 
-    if (this.#checkListIfExists(idString, list)) return list[idString];
+    if (this.#checkListIfExists(idString, list)) {
+      return list[idString];
+    }
 
     const errorString = category === "pages" ? "page" : "social";
     const capitalized = `${errorString
@@ -192,6 +197,10 @@ class InfoTool {
   }
 
   static #getList(type, category) {
+    if (!type || !category) {
+      throw new Error("Missing arguments!");
+    }
+
     const availableListTypes = ["projects", "skills"];
     if (availableListTypes.includes(type)) {
       const list = type === "projects" ? this.#projectsList : this.#skillsList;
@@ -201,6 +210,10 @@ class InfoTool {
   }
 
   static #checkListIfExists(stringReferenceForId, list) {
+    if (!stringReferenceForId || !list) {
+      throw new Error("Missing arguments");
+    }
+
     const items = [];
     for (let item in list) items.push(item);
     return items.includes(stringReferenceForId);
