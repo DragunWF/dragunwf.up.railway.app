@@ -1,7 +1,7 @@
 # DragunWF Web App
 
 ![GitHub top language](https://img.shields.io/github/languages/top/DragunWF/dragunwf.herokuapp.com)
-![Lines of code](https://img.shields.io/tokei/lines/github/DragunWF/dragunwf.herokuapp.com)
+![Lines of code](https://img.shields.io/tokei/lines/github/DragunWF/dragunwf.up.railway.app)
 ![GitHub repo size](https://img.shields.io/github/repo-size/DragunWF/dragunwf.herokuapp.com)
 
 ## Description:
