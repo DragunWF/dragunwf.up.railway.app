@@ -1,22 +1,22 @@
 import express from "express";
-import DatabaseTool from "../utils/db-tool.js";
-import InfoTool from "../utils/info-tool.js";
-import GeneralTool from "../utils/general-tool.js";
-import ProblemsSolvedTracker from "../utils/problems-solved-tracker.js";
+import Database from "../utils/database.js";
+import InfoTool from "../utils/infoTool.js";
+import Utils from "../utils/utils.js";
+import ProblemsSolvedTracker from "../utils/problemsSolvedTracker.js";
 
 const skillsRouter = express.Router();
 
 skillsRouter.get("/", (req, res) => {
-  const languagesArray = GeneralTool.splitAmpersandsFromArray(
+  const languagesArray = Utils.splitAmpersandsFromArray(
     InfoTool.getSkillsList("languages")
   );
   res.render("skills", {
     data: {
-      languages: GeneralTool.concatenateStringsWithAnd(languagesArray),
+      languages: Utils.concatenateStringsWithAnd(languagesArray),
     },
   });
 
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("skills"));
+  Database.insertPageVisit(InfoTool.getPageId("skills"));
 });
 
 skillsRouter.get("/more", async (req, res) => {
@@ -25,14 +25,14 @@ skillsRouter.get("/more", async (req, res) => {
       languages: InfoTool.getSkillsList("languages"),
       misc: InfoTool.getSkillsList("misc"),
       technologies: InfoTool.getSkillsList("technologies"),
-      concatenateSkills: GeneralTool.concatenateStrings,
-      problemsSolved: GeneralTool.formatProblemsSolved(
+      concatenateSkills: Utils.concatenateStrings,
+      problemsSolved: Utils.formatProblemsSolved(
         await ProblemsSolvedTracker.getTotalProblemsSolved()
       ),
     },
   });
 
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("skillsInfo"));
+  Database.insertPageVisit(InfoTool.getPageId("skillsInfo"));
 });
 
 export default skillsRouter;

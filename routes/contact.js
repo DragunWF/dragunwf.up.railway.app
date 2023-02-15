@@ -1,18 +1,18 @@
 import express, { request } from "express";
-import DatabaseTool from "../utils/db-tool.js";
-import InfoTool from "../utils/info-tool.js";
-import sendMessageForm from "../utils/form-bot.js";
+import Database from "../utils/database.js";
+import InfoTool from "../utils/infoTool.js";
+import sendMessageForm from "../utils/formBot.js";
 
 const contactRouter = express.Router();
 
 contactRouter.get("/", (req, res) => {
   res.render("contact");
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("contact"));
+  Database.insertPageVisit(InfoTool.getPageId("contact"));
 });
 
 contactRouter.get("/form", (req, res) => {
   res.render("message-form");
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("messageForm"));
+  Database.insertPageVisit(InfoTool.getPageId("messageForm"));
 });
 
 contactRouter.post("/form", (req, res) => {

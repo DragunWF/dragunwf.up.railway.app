@@ -11,7 +11,7 @@ const db = mysql.createPool({
   database: process.env.DB_DATABASE,
 });
 
-class DatabaseTool {
+class Database {
   static insertPageVisit(pageId) {
     if (!pageId) {
       throw new Error("Missing argument!");
@@ -39,4 +39,4 @@ class DatabaseTool {
   }
 }
 
-export default DatabaseTool;
+export default Database;

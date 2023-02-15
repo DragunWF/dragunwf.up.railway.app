@@ -6,10 +6,10 @@ import skillsRouter from "./routes/skills.js";
 import contactRouter from "./routes/contact.js";
 import socialsRouter from "./routes/socials.js";
 
-import DatabaseTool from "./utils/db-tool.js";
-import InfoTool from "./utils/info-tool.js";
-import GeneralTool from "./utils/general-tool.js";
-import ProblemsSolvedTracker from "./utils/problems-solved-tracker.js";
+import Database from "./utils/database.js";
+import InfoTool from "./utils/infoTool.js";
+import Utils from "./utils/utils.js";
+import ProblemsSolvedTracker from "./utils/problemsSolvedTracker.js";
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -20,12 +20,12 @@ app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
   res.render("index");
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("home"));
+  Database.insertPageVisit(InfoTool.getPageId("home"));
 });
 
 app.get("/about", (req, res) => {
   res.render("about");
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("about"));
+  Database.insertPageVisit(InfoTool.getPageId("about"));
 });
 
 app.get("/problems-solved", async (req, res) => {
@@ -36,20 +36,18 @@ app.get("/problems-solved", async (req, res) => {
 
   res.render("problems-solved", {
     data: {
-      totalSolved: GeneralTool.formatProblemsSolved(
-        codewars + codeforces + codechef
-      ),
-      codewarsStats: GeneralTool.formatProblemsSolved(codewars, true),
-      codeforcesStats: GeneralTool.formatProblemsSolved(codeforces),
-      codechefStats: GeneralTool.formatProblemsSolved(codechef),
+      totalSolved: Utils.formatProblemsSolved(codewars + codeforces + codechef),
+      codewarsStats: Utils.formatProblemsSolved(codewars, true),
+      codeforcesStats: Utils.formatProblemsSolved(codeforces),
+      codechefStats: Utils.formatProblemsSolved(codechef),
     },
   });
 
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("problemsSolved"));
+  Database.insertPageVisit(InfoTool.getPageId("problemsSolved"));
 });
 
 app.get("/deception", (req, res) => {
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("deception"));
+  Database.insertPageVisit(InfoTool.getPageId("deception"));
   res.redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
 });
 

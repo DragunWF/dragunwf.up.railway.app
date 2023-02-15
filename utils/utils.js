@@ -1,4 +1,4 @@
-class GeneralTool {
+class Utils {
   static concatenateStrings(array) {
     if (!array) {
       throw new Error("Missing argument!");
@@ -54,4 +54,4 @@ class GeneralTool {
   }
 }
 
-export default GeneralTool;
+export default Utils;

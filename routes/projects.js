@@ -1,12 +1,12 @@
 import express from "express";
-import DatabaseTool from "../utils/db-tool.js";
-import InfoTool from "../utils/info-tool.js";
+import Database from "../utils/database.js";
+import InfoTool from "../utils/infoTool.js";
 
 const projectsRouter = express.Router();
 
 projectsRouter.get("/", (req, res) => {
   res.render("projects");
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("projects"));
+  Database.insertPageVisit(InfoTool.getPageId("projects"));
 });
 
 projectsRouter.get("/list", (req, res) => {
@@ -17,7 +17,7 @@ projectsRouter.get("/list", (req, res) => {
       automationAndBots: InfoTool.getProjectsList("automationAndBots"),
     },
   });
-  DatabaseTool.insertPageVisit(InfoTool.getPageId("projectsList"));
+  Database.insertPageVisit(InfoTool.getPageId("projectsList"));
 });
 
 export default projectsRouter;
