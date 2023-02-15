@@ -1,7 +1,7 @@
 import express, { request } from "express";
 import Database from "../utils/database.js";
 import InfoTool from "../utils/infoTool.js";
-import sendMessageForm from "../utils/formBot.js";
+import FormBot from "../utils/formBot.js";
 
 const contactRouter = express.Router();
 
@@ -16,7 +16,7 @@ contactRouter.get("/form", (req, res) => {
 });
 
 contactRouter.post("/form", (req, res) => {
-  sendMessageForm(req.body);
+  FormBot.sendMessageForm(req.body);
   res.redirect("form/submitted");
 });
 
