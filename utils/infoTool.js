@@ -131,7 +131,7 @@ class InfoTool {
     technologies: [
       {
         category: "Web Development",
-        skills: ["Node.js", "Express.js", "jQuery"],
+        skills: ["Node.js", "Express.js", "jQuery", "Flask"],
       },
       { category: "Game Development", skills: ["Unity Engine", "PyGame"] },
       {
