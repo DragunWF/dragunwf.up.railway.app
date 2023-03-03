@@ -89,6 +89,13 @@ class InfoTool {
           "the Unity Engine and C#. My submission for GameDev.tv's 2022 game jam.",
       },
       {
+        name: "Mage Dash",
+        link: "https://dragonwf.itch.io/mage-dash",
+        description:
+          "Play as a mage hurling fire spells through a dangerous desert full of monsters. " +
+          "Made with the Unity Engine and C#.",
+      },
+      {
         name: "Geo-Shooter",
         link: "https://dragonwf.itch.io/geo-shooter",
         description:
