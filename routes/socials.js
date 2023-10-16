@@ -25,7 +25,7 @@ socialsRouter.get("/steam", (req, res) => {
 
 socialsRouter.get("/codewars", (req, res) => {
   Database.insertSocialsVisit(InfoTool.getSocialId("codewars"));
-  res.redirect("https://www.codewars.com/users/DragonWF");
+  res.redirect("https://www.codewars.com/users/DragunWF");
 });
 
 socialsRouter.get("/typeracer", (req, res) => {

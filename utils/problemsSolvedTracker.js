@@ -4,7 +4,7 @@ import axios from "axios";
 
 class ProblemsSolvedTracker {
   static #username = "DragunWF";
-  static #codewarsUsername = "DragonWF";
+  static #codewarsUsername = "DragunWF";
   static #digits = "0123456789";
 
   static async getTotalProblemsSolved() {
