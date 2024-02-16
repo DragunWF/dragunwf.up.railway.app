@@ -20,7 +20,7 @@ socialsRouter.get("/itch.io", (req, res) => {
 
 socialsRouter.get("/steam", (req, res) => {
   Database.insertSocialsVisit(InfoTool.getSocialId("steam"));
-  res.redirect("https://steamcommunity.com/profiles/76561198201145658");
+  res.redirect("");
 });
 
 socialsRouter.get("/codewars", (req, res) => {
