@@ -138,17 +138,26 @@ class InfoTool {
     technologies: [
       {
         category: "Web Development",
-        skills: ["Node.js", "Express.js", "jQuery", "Flask"],
+        skills: ["Node.js", "Express.js", "jQuery", "Flask", "Django", "React"],
       },
       { category: "Game Development", skills: ["Unity Engine", "PyGame"] },
       {
-        category: "Bots/Automation",
-        skills: ["Selenium.py", "Discord.js", "PyAutoGUI"],
+        category: "Bots/Automation/Misc",
+        skills: [
+          "Selenium.py",
+          "Discord.js",
+          "PyAutoGUI",
+          "Discord.py",
+          "WinForms",
+        ],
       },
-      { category: "Databases", skills: ["MySQL", "SQLite"] },
       {
-        category: "Code Editors/IDEs",
-        skills: ["VSCode", "Visual Studio", "NetBeans"],
+        category: "Databases",
+        skills: ["MySQL", "SQLite", "Microsoft SQL", "MongoDB", "Firebase"],
+      },
+      {
+        category: "Mobile Development",
+        skills: ["Android Studio"],
       },
       { category: "Source Control", skills: ["Git", "GitHub"] },
       { category: "Operating Systems", skills: ["Windows", "Linux", "MacOS"] },
